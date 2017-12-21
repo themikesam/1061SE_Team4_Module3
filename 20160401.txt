@@ -10,7 +10,7 @@ public class TestThread extends Thread{
         }
     }
     public static void main(String[] argv){
-        Thread t1 = new TestThread("«\«\");
+        Thread t1 = new TestThread("¤p«\«\");
         Thread t2 = new TestThread("¤ë¤ë");
         //after a Thread was started, it execute run()
         t1.setPriority(Thread.NORM_PRIORITY);
