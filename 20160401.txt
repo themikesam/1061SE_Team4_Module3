@@ -1,0 +1,22 @@
+import java.util.*;
+public class TestThread extends Thread{
+    private String name;
+    public TestThread(String name){
+        this.name = name;
+    }
+    public void run(){//overrid method defined in class Thread
+        for(;;){
+            System.out.println("Hello"+name);
+        }
+    }
+    public static void main(String[] argv){
+        Thread t1 = new TestThread("¦Ñ«\");
+        Thread t2 = new TestThread("¤ë¤ë");
+        //after a Thread was started, it execute run()
+        t1.setPriority(Thread.NORM_PRIORITY);
+        t2.setPriority(Thread.NORM_PRIORITY);
+        Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
+        t1.start();
+        t2.start();
+    }
+}
