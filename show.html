@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>展示</title>
       <link type="text/css" rel="stylesheet" href="show.css">
   </head>
@@ -14,11 +14,11 @@
     <a href="" style= "text-decoration:none">Winter</a>
     </p>
     <div class="w3-content w3-display-container">
-    <img id="slide" class="mySlides" src="spfrog1.jpg" >
-    <img id="slide" class="mySlides" src="spfrog2.jpg" >
-
+    <img id="slide" class="mySlides1" src="spfrog1.jpg" >
+    <img id="slide" class="mySlides1" src="spfrog2.jpg" >
     <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
     <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    
 </div>
 <script>
     var slideIndex = 1;
@@ -30,16 +30,39 @@
 
     function showDivs(n) {
         var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
-                }
+        var x = document.getElementsByClassName("mySlides1");
+        if (n > x.length) {
+            slideIndex = 1
+        }    
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
         x[slideIndex-1].style.display = "block";  
     }
-</script>
+    </script>
+    <h1>與客人互動時光</h1>
+        <div class="w3-content w3-display-container">
+        <img id="slide" class="mySlides2" src="black1.jpg" >
+        <img id="slide" class="mySlides2" src="black2.jpg" >
+        </div>
+    <script>
+    var myIndex = 0;
+    carousel();
 
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides2");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
 </body>
 </html>
-
