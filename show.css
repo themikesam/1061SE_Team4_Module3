@@ -8,6 +8,7 @@ h1, h2 {
 }
 
 #slide{
+    border:4px outset #006400;
     height:200px;
     width:200px;
 }
