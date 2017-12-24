@@ -1,6 +1,5 @@
 body {
-	font-family:     Verdana, Geneva, Arial, sans-serif;
-    background-color:
+    font-family:     Verdana, Geneva, Arial, sans-serif;
 }
 
 h1, h2 {    
@@ -9,7 +8,7 @@ h1, h2 {
 #w3button1,
 #w3button2{
     position: absolute;
-    top:227px;
+    top:330px;
     cursor: pointer;
 }
 #w3button1{ left:10px;}
@@ -28,6 +27,45 @@ h2 {
   font-weight:     normal;
 }
 
-p {
+div.su{
+    width: 100px;
+    padding: 2px;
+    background-color:hsla(370, 100%, 50%, 0.2);
+    margin: .2em;
+    box-sizing: border-box ;
+}
+div.au{
+    width: 100px;
+    padding: 2px;
+    background-color:hsla(30, 100%, 50%, 0.2);
+    margin: .2em;
+    box-sizing: border-box ;
+}
+div.wi{
+    width: 100px;
+    padding: 2px;
+    background-color:hsla(240, 100%, 50%, 0.2);
+    margin: .2em;
+    box-sizing: border-box ;
+}
+div.sp{
+    width: 100px;
+    padding: 2px;
+    background-color:hsla(100, 100%, 50%, 0.2);
+    margin: .2em;
+    box-sizing: border-box ;
+}
+div.sp:hover,
+div.su:hover,
+div.au:hover,
+div.wi:hover{
+    width: 150px;
+}
+div.sp,div.su,div.au,div.wi{
+    -webkit-transition: width 1s;
+            transition: width 1s;
+}
+div.sp,div.su,div.au,div.wi{
     color: maroon;
+    font-size : 20px;
 }
