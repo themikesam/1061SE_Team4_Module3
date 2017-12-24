@@ -1,5 +1,5 @@
 body {
-    font-family:     Verdana, Geneva, Arial, sans-serif;
+    font-family:Verdana, Geneva, Arial, sans-serif;
 }
 
 hr.style-four {
@@ -12,15 +12,24 @@ h1, h2 {
 #w3button1,
 #w3button2{
     position: absolute;
-    top:330px;
+    top:335px;
     cursor: pointer;
 }
 #w3button1{ left:10px;}
-#w3button2{ right:960px;}
+#w3button2{ right:1135px;}
 #slide{
     border:4px outset #006400;
     height:200px;
     width:200px;
+}
+hr.hr1{  
+     border: none;
+  height: 10px;
+  background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #fff 5px, #66B266 0) 0 5px;
+  background-color: #fff;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 15px 10px;
 }
 h1 {
   font-family:     sans-serif;
