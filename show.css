@@ -23,13 +23,13 @@ h1, h2 {
     width:200px;
 }
 hr.hr1{  
-     border: none;
-  height: 10px;
-  background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #fff 5px, #66B266 0) 0 5px;
-  background-color: #fff;
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 15px 10px;
+    border: none;
+    height: 10px;
+    background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #fff 5px, #66B266 0) 0 5px;
+    background-color: #fff;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 15px 10px;
 }
 h1 {
   font-family:     sans-serif;
