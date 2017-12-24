@@ -27,45 +27,45 @@ h2 {
   font-weight:     normal;
 }
 
-div.su{
+p.su{
     width: 100px;
     padding: 2px;
     background-color:hsla(370, 100%, 50%, 0.2);
     margin: .2em;
     box-sizing: border-box ;
 }
-div.au{
+p.au{
     width: 100px;
     padding: 2px;
     background-color:hsla(30, 100%, 50%, 0.2);
     margin: .2em;
     box-sizing: border-box ;
 }
-div.wi{
+p.wi{
     width: 100px;
     padding: 2px;
     background-color:hsla(240, 100%, 50%, 0.2);
     margin: .2em;
     box-sizing: border-box ;
 }
-div.sp{
+p.sp{
     width: 100px;
     padding: 2px;
     background-color:hsla(100, 100%, 50%, 0.2);
     margin: .2em;
     box-sizing: border-box ;
 }
-div.sp:hover,
-div.su:hover,
-div.au:hover,
-div.wi:hover{
+p.sp:hover,
+p.su:hover,
+p.au:hover,
+p.wi:hover{
     width: 150px;
 }
-div.sp,div.su,div.au,div.wi{
+p.sp,p.su,p.au,p.wi{
     -webkit-transition: width 1s;
             transition: width 1s;
 }
-div.sp,div.su,div.au,div.wi{
+p.sp,p.su,p.au,p.wi{
     color: maroon;
     font-size : 20px;
 }
