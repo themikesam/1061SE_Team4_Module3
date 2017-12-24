@@ -2,6 +2,10 @@ body {
     font-family:Verdana, Geneva, Arial, sans-serif;
 }
 
+hr.style-four {
+    border: 1.5px solid #007e7e;
+}
+
 h1, h2 {    
 	color: black;
 }
