@@ -24,7 +24,7 @@ h1, h2 {
 }
 hr.hr1{  
     border: none;
-    height: 10px;
+    height: 8px;
     background: linear-gradient(-135deg, #fff 5px, transparent 0) 0 5px, linear-gradient(135deg, #fff 5px, #66B266 0) 0 5px;
     background-color: #fff;
     background-position: left bottom;
