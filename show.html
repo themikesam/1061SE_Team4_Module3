@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>展示</title>
@@ -14,12 +15,20 @@
       });
     });
     </script>
+<style type="text/css">
+#button{
+    float:left;
+}
+#flexslider{
+    margin-left:200px;
+}
+</style>
 </head>
   <body> 
     <h1 align="center"><img src="images\Frog.png">歡迎來到青蛙阿婆的收藏館</h1>
     <h3 align="center"><a href = "http://frog.18851.com.tw/" >回青蛙阿婆的家</a></h3>
     <hr class = "hr1" >
-    <div class="button">
+    <div class="button" id="button">
     <p class = "sp">
     <a id = "sp" href="season\spring.html" style= "text-decoration:none">Spring</a>
     </p>
@@ -33,16 +42,19 @@
     <a id = "wi" href="season\winter.html" style= "text-decoration:none">Winter</a>
     </p>
     </div>
-    <div class="flexslider">
+    <div class="flexslider" id="flexslider">
       <ul class="slides">
         <li>
-          <img src="images\test1.jpg" style="width:800px;height:500px;margin:auto;" />
+          <img src="images\test1.jpg" style="width:500px;height:300px;margin:auto;" />
         </li>
         <li>
-          <img src="images\test3.jpg" style="width:800px;height:500px;margin:auto;"/>
+          <img src="images\test2.jpg" style="width:500px;height:300px;margin:auto;" />
         </li>
         <li>
-          <img src="images\test4.jpg" style="width:800px;height:500px;margin:auto;"/>
+          <img src="images\test3.jpg" style="width:500px;height:300px;margin:auto;"/>
+        </li>
+        <li>
+          <img src="images\test4.jpg" style="width:500px;height:300px;margin:auto;"/>
         </li>
       </ul>
     </div>
