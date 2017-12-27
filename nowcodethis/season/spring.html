@@ -9,16 +9,23 @@
 		<title>Hielo by TEMPLATED</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main_spring.css" />
 	</head>
 	<body class="subpage">
-
+        <div id="w3slide" class="w3-content w3-display-container">
+    <img id="slide" class="mySlides1" src="../images/test6.jpg">
+    <img id="slide" class="mySlides1" src="../images/test7.jpg">
+    <img id="slide" class="mySlides1" src="../images/test8.jpg">
+    <img id="slide" class="mySlides1" src="../images/test9.jpg">
+    <button id="w3button1" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button id="w3button2" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="../index.html">FrogMama <span>by TEMPLATED</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
-
+            
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
@@ -35,7 +42,7 @@
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>春天擁有著許多新生命</p>
+						<p>春天 ‧ 戀愛的季節</p><p>青蛙阿婆，讓你愛上大自然</p>
 						<h2>Spring</h2>
 					</header>
 				</div>
@@ -51,6 +58,27 @@
 								<h2>春天的物種</h2>
 							</header>
 							<p>這裡可以放幻燈片</p>
+                            <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides1");
+        if (n > x.length) {
+            slideIndex = 1
+        }    
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+    }
+    </script>
                             </div>
 					</div>
 				</div>
