@@ -1,12 +1,20 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>展示</title>
-      <link type="text/css" rel="stylesheet" href="show.css">
-<script>
-</script>
-  </head>
+    <link type="text/css" rel="stylesheet" href="show.css">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="jquery/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "fade"
+      });
+    });
+    </script>
+</head>
   <body> 
     <h1 align="center"><img src="images\Frog.png">歡迎來到青蛙阿婆的收藏館</h1>
     <h3 align="center"><a href = "http://frog.18851.com.tw/" >回青蛙阿婆的家</a></h3>
@@ -25,14 +33,19 @@
     <a id = "wi" href="season\winter.html" style= "text-decoration:none">Winter</a>
     </p>
     </div>
-    
-  <div id = "w3slide" class="w3-content w3-display-container">
-    <img id="slide" class="mySlides1" src="images\spfrog1.jpg" >
-    <img id="slide" class="mySlides1" src="images\spfrog2.jpg" >
-    <button id ="w3button1" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button id ="w3button2" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-  </div>
-  
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+          <img src="images\test1.jpg" style="width:800px;height:500px;margin:auto;" />
+        </li>
+        <li>
+          <img src="images\test3.jpg" style="width:800px;height:500px;margin:auto;"/>
+        </li>
+        <li>
+          <img src="images\test4.jpg" style="width:800px;height:500px;margin:auto;"/>
+        </li>
+      </ul>
+    </div>
 <script>
     var slideIndex = 1;
     showDivs(slideIndex);
