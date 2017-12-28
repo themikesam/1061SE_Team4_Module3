@@ -1827,7 +1827,7 @@
 
 		.box header p {
 			text-transform: uppercase;
-			font-size: .75rem;
+			font-size: .100rem;
 			font-weight: 300;
 			margin: 0 0 .25rem 0;
 			padding: 0 0 .75rem 0;
@@ -1845,9 +1845,9 @@
 				height: 1px;
 				background-color: rgba(0, 0, 0, 0.125);
 			}
-
+        /* 裡面綠色的框框*/
 		.box .content {
-			padding: 3rem;
+			padding:  6rem 0 10rem 0;
 		}
 
 		.box > :last-child,
@@ -1866,12 +1866,15 @@
 
 			.box .content {
 				padding: 2rem;
+                
 			}
 
 		}
 
 	.box {
-		border-color: rgba(144, 144, 144, 0.25);
+		border-color: rgba(0,255,0,0.3);
+        background-color:rgba(0,255,0,0.3);
+        
 	}
 
 /* Button */
@@ -2669,7 +2672,7 @@
 
 /* Wrapper */
 
-	.wrapper {
+	.wrapper{
 		padding: 6rem 0 4rem 0 ;
 		position: relative;
 		margin: 0;
@@ -2941,7 +2944,7 @@
 				.wrapper.style2 button.alt,
 				.wrapper.style2 .button.alt {
 					background-color: transparent;
-					box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.15);
+					box-shadow: inset 0 0 0 2px rgba(0,255,0,0.3);
 					color: #000 !important;
 				}
 
@@ -4285,7 +4288,7 @@
 
 	#footer {
 		padding: 4rem 0 2rem 0 ;
-		background: #000;
+		background: #0e2104;
 		text-align: center;
 	}
 
@@ -4294,7 +4297,7 @@
 		}
 
 			#footer a:hover {
-				color: #FFF;
+				color: #40a00e;
 			}
 
 		#footer .copyright {
@@ -4308,25 +4311,25 @@
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 3rem 0 1rem 0 ;
+				padding: 10rem 0 1rem 0 ;
 			}
 
 		}
 
 #w3button1,#w3button2{
-    position: relative;
+    position: absolute;
     top:600px;
     cursor: pointer;
     z-index: 20001;
 }
-#w3button1{ left:515px;}
-#w3button2{ left:732px;}
+#w3button1{ left:35%;}
+#w3button2{ left:60%;}
 #slide{
-    position: relative;
+    position: absolute;
     border:4px outset #006400;
-    top :745px;
+    top :89%;
     left:42%;
-    height:220px;
-    width:220px;
+    height:300px;
+    width:300px;
     z-index: 20000;
 }
