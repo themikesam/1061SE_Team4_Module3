@@ -17,12 +17,12 @@
     <img id="slide" class="mySlides1" src="../images/test7.jpg">
     <img id="slide" class="mySlides1" src="../images/test8.jpg">
     <img id="slide" class="mySlides1" src="../images/test9.jpg">
-    <button id="w3button1" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button id="w3button2" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
+    <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
     </div>
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="../index.html">FrogMama <span>by TEMPLATED</span></a></div>
+				<div class="logo"><a href="../index.html">春天展示區<span>&ensp;by TEMPLATED</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
             
@@ -46,18 +46,17 @@
 						<h2>Spring</h2>
 					</header>
 				</div>
-			</section>
-
+            </section>
+            
 		<!-- Two -->
 			<section id="two" class="wrapper style2">
+            <hr class = "hr1" >
 				<div class="inner">
 					<div class="box">
 						<div class="content">
 							<header class="align-center">
-								<p>春天美麗的物種</p>
-								<h2>春天的物種</h2>
+								<p>一堆噁心的青蛙</p>
 							</header>
-							<p>這裡可以放幻燈片</p>
                             <script>
     var slideIndex = 1;
     showDivs(slideIndex);
@@ -76,8 +75,11 @@
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";  
         }
+        //display:block 就會自動換行
         x[slideIndex-1].style.display = "block";  
-    }
+        //指定的毫秒数后调用函数或计算表达式
+        setTimeout(showDivs, 1000);
+    } 
     </script>
                             </div>
 					</div>

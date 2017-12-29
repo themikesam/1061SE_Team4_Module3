@@ -1847,7 +1847,8 @@
 			}
         /* 裡面綠色的框框*/
 		.box .content {
-			padding:  6rem 0 10rem 0;
+            background-image: url(../../images/spring_bg1.jpg);
+			padding:  6rem 0 34rem 0;
 		}
 
 		.box > :last-child,
@@ -3072,7 +3073,9 @@
 			}
 
 			.wrapper.style2 header p {
-				color: #999999;
+                font-size :33px ;
+                font-weight :bold ;
+				color:#c8f4d6;
 			}
 
 			.wrapper.style2 table tbody tr {
@@ -3122,7 +3125,7 @@
 			}
 
 			.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
-				color: #21a30d;
+				color: #76fc37;
                 font-weight:bold;
 			}
 
@@ -3303,7 +3306,8 @@
 
 			.wrapper.style3 header p {
                 font-size : 25px;
-				color: #20c953;
+				color: #99aa91;
+                font-weight : bold;
 			}
 
 			.wrapper.style3 table tbody tr {
@@ -3367,7 +3371,7 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: rgba(0, 0, 0, 0.95);
+				background-color: #3e6d26;
 				height: 100%;
 				left: 0;
 				opacity: 0.75;
@@ -3713,7 +3717,7 @@
 	}
 
 	#header {
-		background: rgba(0, 0, 0, 0.975);
+		background: rgb(17, 51, 29);
 		color: #a6a6a6;
 		cursor: default;
 		height: 3.25em;
@@ -4287,7 +4291,7 @@
 /* Footer */
 
 	#footer {
-		padding: 4rem 0 2rem 0 ;
+		padding: 1rem 0 1rem 0 ;
 		background: #0e2104;
 		text-align: center;
 	}
@@ -4317,19 +4321,36 @@
 		}
 
 #w3button1,#w3button2{
+    font-weight : bold;
     position: absolute;
-    top:600px;
+    top :173%;
+    background: #d1ffba;
+    border:4px solid #2d332f;
+    /* 滑鼠移到上面會變成甚麼圖案*/
     cursor: pointer;
+    /* 重疊順序 越大越上面*/
     z-index: 20001;
 }
-#w3button1{ left:35%;}
-#w3button2{ left:60%;}
+
+#w3button1{ left:20.1%;}
+#w3button2{ left:72.5%;}
 #slide{
+    /* 陰影效果 : box-shadow: h-shadow v-shadow blur spread color inset*/
+    box-shadow: 0 0 15px #000000;
     position: absolute;
-    border:4px outset #006400;
-    top :89%;
-    left:42%;
-    height:300px;
-    width:300px;
-    z-index: 20000;
+    border: 10px inset #000;
+    top :120%;
+    left:20%;
+    height:59%;
+    width:60%;
+    z-index: 1;
+}
+hr.hr1{  
+    border: none;
+    height: 20px;
+    background: linear-gradient(-135deg, #f2f2f2 5px, transparent 0) 0 5px, linear-gradient(135deg, #f2f2f2 5px, #1e511e 0) 0 5px;
+    background-color: #f2f2f2;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 15px 18px;
 }
