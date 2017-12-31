@@ -1808,7 +1808,7 @@
 /* Box */
 
 	.box {
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 		background: #FFF;
 	}
 
@@ -1847,10 +1847,11 @@
 			}
         /* 裡面綠色的框框*/
 		.box .content {
-            background-image: url(../../images/spring_bg1.jpg);
-			padding:  6rem 0 34rem 0;
-            border: 10px inset coral;
-            border-radius: 30%;
+            /*background-image: url(../../images/spring_bg1.jpg);*/
+            background: linear-gradient(to bottom left, #08632e, #21874c,#9fbc20);
+			padding: 4rem 0 34rem 0;
+            border: 20px inset #204f34;
+            /*border-radius: 10%;*/
 		}
 
 		.box > :last-child,
@@ -1873,14 +1874,14 @@
 			}
 
 		}
-
+/**********************************************************************/
 	.box {
 		border-color: rgba(0,255,0,0.3);
-        background-color:#337041;
-        border: 40px solid #ccb089;
-        border-image-source: url(../../images/spring_woodenframe2.png);
-        border-image-slice: 60 100;
-        border-radius: 30%;
+        background-color:#b0fcb0;
+        border: 70px;
+        border-image-source: url(../../images/spring_greenframe.png);
+        border-image-slice: 10%;
+        border-image-source-radius: 30%;
         
 	}
 
@@ -4344,7 +4345,7 @@
 #w3button1,#w3button2{
     font-weight : bold;
     position: absolute;
-    top :173%;
+    top :184%;
     background: #d1ffba;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -4356,25 +4357,32 @@
     z-index: 20001;
 }
 
-#w3button1{ left:20.1%;}
-#w3button2{ left:72.5%;}
+#w3button1{ left:19.4%;}
+#w3button2{ left:73.2%;}
 #slide{
     /* 陰影效果 : box-shadow: h-shadow v-shadow blur spread color inset*/
     box-shadow: 0 0 15px #000000;
     position: absolute;
-    border: 10px solid #3d1c00;
-    top :120%;
+    border: 40px solid #3d1c00;
+    border-image-source: url(../../images/spring_woodenframe.png);
+    border-image-slice: 10%;
+    border-radius : 10%;
+    top :131%;
     left:20%;
     height:59%;
     width:60%;
     z-index: 1;
 }
+h2.sprh2{
+    font-size : 70px;
+    font-weight : bold;
+    text-align:center;
+}
 hr.hr1{  
-    border: none;
-    height: 20px;
-    background: linear-gradient(-135deg, #f2f2f2 5px, transparent 0) 0 5px, linear-gradient(135deg, #f2f2f2 5px, #1e511e 0) 0 5px;
-    background-color: #f2f2f2;
+    height: 30px;
+    background: linear-gradient(-135deg, #f2f2f2 5px, transparent 0) 0 5px, linear-gradient(135deg, #f2f2f2 5px, #1e511e 0) 0 10px;
+    /*background-color: #f2f2f2;*/
     background-position: left bottom;
     background-repeat: repeat-x;
-    background-size: 15px 18px;
+    background-size: 17px 20px;
 }
