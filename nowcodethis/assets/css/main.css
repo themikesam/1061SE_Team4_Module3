@@ -2887,10 +2887,10 @@
 			.wrapper.style1 table.alt tbody tr td {
 				border-color: rgba(255, 255, 255, 0.25);
 			}
-
+        /*青蛙和植物下面的字*/
 		.wrapper.style2 {
 			background-color: #f2f2f2;
-			color: #a6a6a6;
+			color:#595057;
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -4279,6 +4279,9 @@
 
 		}
 
+        
+/*Tell*/
+   
 /* Footer */
 
 	#footer {
