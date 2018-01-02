@@ -4,7 +4,40 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
+
 <html>
+<script>
+//這邊直接copy
+var images_all = new Array();
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+//usage:
+//192.168.1.17會匯入照片到各位的電腦裡
+readTextFile("http://192.168.1.17:8082/img_info", function(text){
+    var data = JSON.parse(text);
+    //console.log(data);
+    //第一張照片
+    var photo = data.img_info[1].url;
+    var ll=0;
+    while (ll<data.img_info.length){
+        //test為自己設的id，照片匯入的地方
+        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
+        document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
+        document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+        ll++;
+    }
+});
+</script>
 	<head>
 		<title>Hielo by TEMPLATED</title>
 		<meta charset="utf-8" />
@@ -13,7 +46,7 @@
 	</head>
 	<body class="subpage">
         <div id="w3slide" class="w3-content w3-display-container">
-    <img id="slide" class="mySlides1" src="../images/test6.jpg">
+    <div id="test"></div>
     <img id="slide" class="mySlides1" src="../images/test7.jpg">
     <img id="slide" class="mySlides1" src="../images/test8.jpg">
     <img id="slide" class="mySlides1" src="../images/test9.jpg">
@@ -48,11 +81,19 @@
                     </header>
                 </div>
             </section>
-            <hr class = "hr1" >
-            
         <!-- Two -->
-        <h2 class = "sprh2">照片齁哩跨</h2>
-            
+        <br><br><br><br><br><br><br><br>
+        <div class ="grass">
+        <img src="../images/spring_grass.png"/>
+        </div>
+        <div class ="grass1">
+        <img src="../images/spring_grass.png"/>
+        </div>
+        <div class ="grass2">
+        <img src="../images/spring_grass.png"/>
+        </div>
+        <p class = "sprh2">照片齁哩跨</p>
+        <p class = "sprp2">春雨綿綿乍暖還寒的時節，此時也正是拜訪青蛙的好時機。只要在溫暖潮濕的夜晚，都有機會聆聽牠們的合唱，觀賞露天上映的歌舞劇青蛙求婚記</p>
                 <section id="two" class="wrapper style2">
                     <div class="inner">
                         <div class="box">
@@ -60,6 +101,7 @@
                                 <header class="align-center">
                                 </header>
                             <script>
+                            
                             
     var slideIndex = 1;
     showDivs(slideIndex);
@@ -88,22 +130,21 @@
 					</div>
 				</div>
 			</section>
-
 		<!-- Footer -->
-        <hr class = "hr1" >
 			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="https://twitter.com/pewdiepie" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.facebook.com/froggrandmashome/" target = "_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/johncena/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					&copy; Untitled. All rights reserved.
-				</div>
+                <div class="container">
+					    <ul class="icons">
+                            <li><a href="https://twitter.com/pewdiepie" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://www.facebook.com/froggrandmashome/" target = "_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="https://www.instagram.com/johncena/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                        </ul>
+                    </div>
+		    <div class="copyright">
+                &copy; Untitled. All rights reserved.
+            </div>
 			</footer>
+
 
         <!-- Scripts -->
             <script src="../assets/js/jquery.min.js"></script>
