@@ -4129,7 +4129,7 @@
     border-image-source: url(../../images/spring_woodenframe.png);
     border-image-slice: 10%;
     border-radius : 10%;
-    top :130%;
+    top :160%;
     left:20%;
     height:59%;
     width:60%;
@@ -4145,12 +4145,22 @@ p.sprp2{
     font-weight : bold;
     text-align:center;
 }
-#sprIMG{
+.grass{
+    position: absolute;
     z-index:20002;
-    top :160%;
-    
-    background: url(../../images/spring_grass.png);
-    background-repeat: repeat;
+    top :232%; 
+}
+.grass1{
+    position: absolute;
+    z-index:20002;
+    left:47%;
+    top :232%;
+}
+.grass2{
+    position: absolute;
+    z-index:20002;
+    left:52.5%;
+    top :232%;
 }
 hr.hr1{  
     height: 30px;
