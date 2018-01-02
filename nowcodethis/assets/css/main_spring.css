@@ -4121,7 +4121,7 @@
 
 #w3button1{ left:19.4%;}
 #w3button2{ left:73.2%;}
-#slide{
+.mySlides1{
     /* 陰影效果 : box-shadow: h-shadow v-shadow blur spread color inset*/
     box-shadow: 0 0 15px #000000;
     position: absolute;
@@ -4129,7 +4129,7 @@
     border-image-source: url(../../images/spring_woodenframe.png);
     border-image-slice: 10%;
     border-radius : 10%;
-    top :160%;
+    top :130%;
     left:20%;
     height:59%;
     width:60%;
@@ -4145,9 +4145,12 @@ p.sprp2{
     font-weight : bold;
     text-align:center;
 }
-img.sprimg{
-    position: absolute;
-    top :131%;
+#sprIMG{
+    z-index:20002;
+    top :160%;
+    
+    background: url(../../images/spring_grass.png);
+    background-repeat: repeat;
 }
 hr.hr1{  
     height: 30px;
