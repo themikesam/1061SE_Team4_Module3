@@ -35,7 +35,7 @@
 		quotes: none;
 	}
 
-	blockquote:before, blockquote:before, q:before, q:before{
+	blockquote:before, blockquote:after, q:before, q:after {
 		content: '';
 		content: none;
 	}
@@ -1808,7 +1808,7 @@
 /* Box */
 
 	.box {
-		margin-bottom: 4rem;
+		margin-bottom: 2rem;
 		background: #FFF;
 	}
 
@@ -1827,7 +1827,7 @@
 
 		.box header p {
 			text-transform: uppercase;
-			font-size: .100rem;
+			font-size: .75rem;
 			font-weight: 300;
 			margin: 0 0 .25rem 0;
 			padding: 0 0 .75rem 0;
@@ -1845,13 +1845,9 @@
 				height: 1px;
 				background-color: rgba(0, 0, 0, 0.125);
 			}
-        /* 裡面綠色的框框*/
+
 		.box .content {
-            /*background-image: url(../../images/spring_bg1.jpg);*/
-            background: linear-gradient(to bottom left, #08632e, #21874c,#9fbc20);
-			padding: 4rem 0 34rem 0;
-            border: 20px inset #204f34;
-            /*border-radius: 10%;*/
+			padding: 3rem;
 		}
 
 		.box > :last-child,
@@ -1870,19 +1866,12 @@
 
 			.box .content {
 				padding: 2rem;
-                
 			}
 
 		}
-/**********************************************************************/
+
 	.box {
-		border-color: rgba(0,255,0,0.3);
-        background-color:#b0fcb0;
-        border: 70px;
-        border-image-source: url(../../images/spring_greenframe.png);
-        border-image-slice: 10%;
-        border-image-source-radius: 30%;
-        
+		border-color: rgba(144, 144, 144, 0.25);
 	}
 
 /* Button */
@@ -2680,7 +2669,7 @@
 
 /* Wrapper */
 
-	.wrapper{
+	.wrapper {
 		padding: 6rem 0 4rem 0 ;
 		position: relative;
 		margin: 0;
@@ -2898,10 +2887,10 @@
 			.wrapper.style1 table.alt tbody tr td {
 				border-color: rgba(255, 255, 255, 0.25);
 			}
-
+        /*青蛙和植物下面的字*/
 		.wrapper.style2 {
 			background-color: #f2f2f2;
-			color: #a6a6a6;
+			color:#595057;
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -2952,7 +2941,7 @@
 				.wrapper.style2 button.alt,
 				.wrapper.style2 .button.alt {
 					background-color: transparent;
-					box-shadow: inset 0 0 0 2px rgba(0,255,0,0.3);
+					box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.15);
 					color: #000 !important;
 				}
 
@@ -3080,9 +3069,7 @@
 			}
 
 			.wrapper.style2 header p {
-                font-size :33px ;
-                font-weight :bold ;
-				color:#c8f4d6;
+				color: #999999;
 			}
 
 			.wrapper.style2 table tbody tr {
@@ -3112,7 +3099,7 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/spring_bg.jpg);
+			background-image: url(../../images/bg.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3128,28 +3115,12 @@
 			}
 
 			.wrapper.style3 strong, .wrapper.style3 b {
-				color: #ace2bd;
+				color: #ffffff;
 			}
 
 			.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
-                color: #5cf713;
-                font-size : 30px;
-                /* -moz-对应 Firefox, -webkit-对应 Safari and Chrome,-o- for Opera-ms- for Internet Explorer*/
-                -webkit-transition: all 1s ease-in-out;
-                -moz-transition: all 1s ease-in-out;
-                -o-transition: all 1s ease-in-out;
-                transition: all 1s ease-in-out;
-                font-weight:bold;
+				color: #ffffff;
 			}
-             .wrapper.style3 h2:hover {
-                 font-size : 50px;
-                 color :#b2ff8e;
-                -webkit-transform: rotate(360deg);
-                -moz-transform: rotate(360deg);
-                -o-transform: rotate(360deg);
-                -ms-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
 
 			.wrapper.style3 blockquote {
 				border-left-color: rgba(255, 255, 255, 0.25);
@@ -3327,9 +3298,7 @@
 			}
 
 			.wrapper.style3 header p {
-                font-size : 25px;
-				color: #99aa91;
-                font-weight : bold;
+				color: red;
 			}
 
 			.wrapper.style3 table tbody tr {
@@ -3363,7 +3332,7 @@
 
 			.wrapper.style3 p {
 				text-transform: uppercase;
-				font-size: .75rem;
+				font-size: 1.25rem;
 				font-weight: 300;
 				margin: 0 0 .5rem 0;
 				padding: 0 0 1rem 0;
@@ -3379,7 +3348,7 @@
 					left: 0;
 					width: 50%;
 					height: 1px;
-					background-color: rgba(255, 255, 255, 0.5);
+					background-color:orange;
 				}
 
 			.wrapper.style3:before {
@@ -3393,10 +3362,10 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: #3e6d26;
+				background-color: #ffe4b5;
 				height: 100%;
 				left: 0;
-				opacity: 0.75;
+				opacity: 0.95;
 				position: absolute;
 				top: 0;
 				width: 100%;
@@ -3739,8 +3708,8 @@
 	}
 
 	#header {
-		background: rgb(17, 51, 29);
-		color: #a6a6a6;
+		background: #fafad2;
+		color: orange;
 		cursor: default;
 		height: 3.25em;
 		left: 0;
@@ -3753,7 +3722,7 @@
 	}
 
 		#header > .logo {
-			display: inline-block;
+			display: inline-black;
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
@@ -3762,10 +3731,13 @@
 			position: absolute;
 			top: 0;
 		}
-
+		#menu2 li{
+                display:inline; margin:0; padding:10px;
+        }
+		
 			#header > .logo a {
 				font-size: 1.25em;
-				color: #FFF;
+				color: orange;
 				text-decoration: none;
 			}
 
@@ -3776,7 +3748,8 @@
 			#header > .logo span {
 				font-weight: 400;
 				font-size: .8em;
-				color: rgba(255, 255, 255, 0.65);
+				/*color: rgba(255, 255, 255, 0.65);*/
+                color: red;
 			}
 
 		#header > a {
@@ -3911,7 +3884,7 @@
 		-webkit-overflow-scrolling: touch;
 		background: rgba(0, 0, 0, 0.95);
 		box-shadow: none;
-		color: #000;
+		color: #ff0000;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -4310,24 +4283,27 @@
 
 		}
 
+        
+/*Tell*/
+   
 /* Footer */
 
 	#footer {
-		padding: 1rem 0 1rem 0 ;
-		background: #0e2104;
+		padding: 0rem 0 2rem 0 ;
+		background: #fffacd;
 		text-align: center;
 	}
 
 		#footer a {
-			color: rgba(255, 255, 255, 0.5);
+			color: #000;
 		}
 
 			#footer a:hover {
-				color: #40a00e;
+				color: #FFF;
 			}
 
 		#footer .copyright {
-			color: #bbb;
+			color: #000;
 			font-size: 0.9rem;
 			margin: 0 0 2rem 0;
 			padding: 0;
@@ -4337,52 +4313,7 @@
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 10rem 0 1rem 0 ;
+				padding: 3rem 0 1rem 0 ;
 			}
 
 		}
-
-#w3button1,#w3button2{
-    font-weight : bold;
-    position: absolute;
-    top :184%;
-    background: #d1ffba;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    border:4px solid #2d332f;
-    /* 滑鼠移到上面會變成甚麼圖案*/
-    cursor: pointer;
-    /* 重疊順序 越大越上面*/
-    z-index: 20001;
-}
-
-#w3button1{ left:19.4%;}
-#w3button2{ left:73.2%;}
-#slide{
-    /* 陰影效果 : box-shadow: h-shadow v-shadow blur spread color inset*/
-    box-shadow: 0 0 15px #000000;
-    position: absolute;
-    border: 40px solid #3d1c00;
-    border-image-source: url(../../images/spring_woodenframe.png);
-    border-image-slice: 10%;
-    border-radius : 10%;
-    top :131%;
-    left:20%;
-    height:59%;
-    width:60%;
-    z-index: 1;
-}
-h2.sprh2{
-    font-size : 70px;
-    font-weight : bold;
-    text-align:center;
-}
-hr.hr1{  
-    height: 30px;
-    background: linear-gradient(-135deg, #f2f2f2 5px, transparent 0) 0 5px, linear-gradient(135deg, #f2f2f2 5px, #1e511e 0) 0 10px;
-    /*background-color: #f2f2f2;*/
-    background-position: left bottom;
-    background-repeat: repeat-x;
-    background-size: 17px 20px;
-}
