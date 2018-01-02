@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hielo by TEMPLATED</title>
+    <link rel="stylesheet" href="rotating-slider.min.css">
+    <style>
+        /* Demo Styles */
+        @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
+        body{
+            background: #333;
+            font-family: 'Roboto Slab', sans-serif;
+            font-weight: 300;
+            overflow: hidden;
+        }
+		h1{
+			background: #bbb;
+			font-color: #ccc;
+			font-size: 30pt;
+		}
+		nav{
+			background-image:url('圖片/snow.jpg');
+			background-repeat:no-repeat;
+			background-size:cover;
+			height:250px;
+		}
+		#top nav.menu li{
+		    margin-top: 200px;
+		}
+        .rotating-slider ul.slides li{
+            color: #fff
+        }
+        .rotating-slider ul.slides li:nth-of-type(1){
+            background: #3498db;
+        }
+        .rotating-slider ul.slides li:nth-of-type(2){
+            background: #f1c40f;
+        }
+        .rotating-slider ul.slides li:nth-of-type(3){
+            background: #e74c3c;
+        }
+        .rotating-slider ul.slides li:nth-of-type(4){
+           background: #3498db;
+        }
+        .rotating-slider ul.slides li:nth-of-type(5){
+            background: #f1c40f;
+        }
+        .rotating-slider ul.slides li:nth-of-type(6){
+            background: #e74c3c;
+        }
+        .rotating-slider ul.slides li .inner{
+            box-sizing: border-box;
+            padding: 2em;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+	<h1>冬天展示區 by TEMPLATEDi</h1>
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="../../index.html">Home</a></li>
+                <li><a href="../story.html">青蛙阿婆的故事</a></li>
+                <li><a href="../spring.html">Spring 春天</a></li>
+                <li><a href="../summer/summer.html">Summer 夏天</a></li>
+                <li><a href="../autumn.html">Autumn 秋天</a></li>
+                <li><a href="winter.html">Winter 冬天</a></li>
+                <li><a href="../../elements.html">Elements</a></li>
+			</ul>
+		</nav>
+	</div>
+    <div class="rotating-slider">
+        <ul class="slides">
+            <li>
+                <div class="inner">
+                    <img src="圖片/win01.jpg">
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+					<img src="圖片/win02.jpg">
+				</div>
+            </li>
+            <li>
+                <div class="inner">
+                    <img src="圖片/win03.jpg">
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+					<img src="圖片/win04.jpg">
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <img src="圖片/win05.jpg">
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <img src="圖片/win06.jpg">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="jquery.rotating-slider.min.js"></script>
+    <script>
+        $(function(){ 
+            $('.rotating-slider').rotatingSlider({
+                slideHeight : Math.min(360, window.innerWidth -80),
+                slideWidth : Math.min(480, window.innerWidth - 80),
+                afterRotationStart: function(){
+                    console.log('Rotating to slide '+($('.rotating-slider .active-slide').index() + 1));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
