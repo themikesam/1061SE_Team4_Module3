@@ -90,6 +90,9 @@ html[xmlns] .flexslider .slides {
   box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .introduce{
+  font-family: Microsoft JhengHei;
+  font-weight: 900;
+  opacity:0.65;
   font-size:20px;
   margin-top:50px;
   margin-left:800px;
@@ -112,9 +115,6 @@ html[xmlns] .flexslider .slides {
   margin-top:250px;
   width:500px;
   position: absolute;
-}
-.hello img{
-background:red;
 }
 .flexslider .slides {
   zoom: 1;
