@@ -4099,7 +4099,7 @@
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 10rem 0 1rem 0 ;
+				padding: 10rem 0 0 0 ;
 			}
 
 		}
@@ -4164,19 +4164,19 @@ p.sprp2{
 .grass{
     position: absolute;
     z-index:20002;
-    top :230%; 
+    top :228%; 
 }
 .grass1{
     position: absolute;
     z-index:20002;
-    left:47%;
-    top :230%;
+    left:45.5%;
+    top :228%;
 }
 .grass2{
     position: absolute;
     z-index:20002;
     left:52.5%;
-    top :230%;
+    top :228%;
 }
 hr.hr1{  
     height: 30px;
