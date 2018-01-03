@@ -1806,12 +1806,12 @@
 	}
 
 /* Box */
-
+/*
 	.box {
 		margin-bottom: 4rem;
 		background: #FFF;
 	}
-
+*/
 		.box .image.fit {
 			margin: 0;
 			border-radius: 0;
@@ -1846,11 +1846,18 @@
 				background-color: rgba(0, 0, 0, 0.125);
 			}
         /* 裡面綠色的框框*/
-		.box .content {
+        .box .content {
             /*background-image: url(../../images/spring_bg1.jpg);*/
             background: linear-gradient(to bottom left, #08632e, #21874c,#9fbc20);
-			padding: 4rem 0 34rem 0;
-            border: 20px inset #204f34;
+            padding: 10rem 0 20rem 0;
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+            margin-left: 17rem;
+            margin-right: 17rem;
+            border: 10px inset #204f34;
+            border-image-source: url(../../images/spring_greenframe.png);
+            border-image-slice: 10%;
+            border-image-source-radius: 30%;
             /*border-radius: 10%;*/
 		}
 
@@ -1875,16 +1882,13 @@
 
 		}
 /**********************************************************************/
-	.box {
+	/*.box {
 		border-color: rgba(0,255,0,0.3);
-        background-color:#b0fcb0;
-        border: 70px;
         border-image-source: url(../../images/spring_greenframe.png);
         border-image-slice: 10%;
         border-image-source-radius: 30%;
-        
 	}
-
+    */
 /* Button */
 
 	input[type="submit"],
@@ -4078,6 +4082,7 @@
 		padding: 1rem 0 1rem 0 ;
 		background: #0e2104;
 		text-align: center;
+        margin-top:10rem;
 	}
 
 		#footer a {
@@ -4129,10 +4134,11 @@
     border-image-source: url(../../images/spring_woodenframe.png);
     border-image-slice: 10%;
     border-radius : 10%;
-    top :160%;
-    left:20%;
+    top :128%;
+    left:50%;
+    margin-left:-20%;
     height:59%;
-    width:60%;
+    width:40%;
     z-index: 1;
 }
 .spbg{
@@ -4150,17 +4156,18 @@
             transition: height 1s;
 }
 p.sprh2{
-    color : #bfffd8;
+    color : #7fad68;
     font-size : 70px;
     font-weight : bold;
     text-align:center;
 }
 p.sprp2{
-    color : #bfffd8;
+    color : #7fad68;
     font-size : 15px;
     font-weight : bold;
     text-align:center;
 }
+/*
 .grass{
     position: absolute;
     z-index:20002;
@@ -4177,12 +4184,12 @@ p.sprp2{
     z-index:20002;
     left:52.5%;
     top :228%;
-}
+}/*
 hr.hr1{  
     height: 30px;
     background: linear-gradient(-135deg, #f2f2f2 5px, transparent 0) 0 5px, linear-gradient(135deg, #f2f2f2 5px, #1e511e 0) 0 10px;
-    /*background-color: #f2f2f2;*/
+    /*background-color: #f2f2f2;*//*
     background-position: left bottom;
     background-repeat: repeat-x;
     background-size: 17px 20px;
-}
+}/*
