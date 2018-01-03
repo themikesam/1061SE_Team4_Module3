@@ -4286,19 +4286,20 @@
 
         
 /*Tell*/
-#leaves {position:relative;top:-50px;width:100%;text-align: right;}
+#leaves {position:relative;top:120px;width:100%;text-align: right;}
 
 #leaves i {
     display: inline-block;
     width: 200px;
-    height: 150px;
-    background: linear-gradient(to bottom right, #309900, #005600);
+    height: 400px;
+    background: linear-gradient(to bottom right, #ffa500, #ffa500);
     transform: skew(20deg);
-    border-radius: 5% 40% 70%;
-    box-shadow: inset 0px 0px 1px #222;
-    border: 1px solid #333;
+    border-radius: 0% 70% 0% 70% ;
+    margin: -280px 40px 54px -34px;
+    box-shadow: inset 0px 0px 1px #ffa500;
+    border: 1px solid #ffa500;
     z-index: 1;
-    -webkit-animation: falling 5s 0s infinite;
+    -webkit-animation: falling 8s 0s infinite;
 }
 
 #leaves i:nth-of-type(2n) { -webkit-animation: falling2 5s 0s infinite; }
@@ -4313,11 +4314,11 @@
   width: 32px;
   transform: rotate(49deg);
   border-radius: 0% 15% 15% 0%;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-  border-left: 0px solid #222;
-  border-right: 1px solid #222;
-  background: linear-gradient(to right, rgba(0,100,0,1), #005600);
+  border-top: 1px solid #ffa500;
+  border-bottom: 1px solid #ffa500;
+  border-left: 0px solid #ffa500;
+  border-right: 1px solid #ffa500;
+  background: linear-gradient(to right, #ffa500, #ff4500);
   z-index: 1;
 }
 
@@ -4325,12 +4326,12 @@
   content: '';
   height: 125px;
   width: 10px;
-  background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
+  background: linear-gradient(to right, #ffa500, #ffa500);
   display: block;
   transform: rotate(125deg);
   position: absolute;
   left: 85px;
-  border-radius:50%;
+  border-radius:80%;
 }
 
 
@@ -4362,9 +4363,9 @@
 #leaves i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
 #leaves i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
 
-#leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #309900, #005600); }
-#leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #5e9900, #2b5600); }
-#leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, #990, #564500); }
+#leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #ffa500, #ff0000); }
+#leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #ffa500, #ff0000); }
+#leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right,#ffa500, #ff0000); }
 
 #leaves i:nth-of-type(n)    { opacity: .7;}
 #leaves i:nth-of-type(3n+1)  { opacity: .5;}
