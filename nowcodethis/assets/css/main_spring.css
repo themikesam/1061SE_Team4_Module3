@@ -1807,10 +1807,10 @@
 
 /* Box */
 /*
-	.box {
-		margin-bottom: 4rem;
-		background: #FFF;
-	}
+    .box {
+        margin-bottom: 4rem;
+        background: #FFF;
+    }
 */
 		.box .image.fit {
 			margin: 0;
@@ -1847,19 +1847,22 @@
 			}
         /* 裡面綠色的框框*/
         .box .content {
-            /*background-image: url(../../images/spring_bg1.jpg);*/
-            background: linear-gradient(to bottom left, #08632e, #21874c,#9fbc20);
+            background: #13210f;
             padding: 10rem 0 20rem 0;
             margin-top: 10rem;
             margin-bottom: 10rem;
             margin-left: 17rem;
             margin-right: 17rem;
-            border: 10px inset #204f34;
-            border-image-source: url(../../images/spring_greenframe.png);
+            border: 50px solid #008000;
+            border-image-source: url(../../images/spring_grass2.png);
             border-image-slice: 10%;
             border-image-source-radius: 30%;
             /*border-radius: 10%;*/
 		}
+        #two{
+            background-image: url(../../images/springbackground.jpg);
+            background-repeat: repeat;
+        }
 
 		.box > :last-child,
 		.box > :last-child > :last-child,
@@ -1881,14 +1884,6 @@
 			}
 
 		}
-/**********************************************************************/
-	/*.box {
-		border-color: rgba(0,255,0,0.3);
-        border-image-source: url(../../images/spring_greenframe.png);
-        border-image-slice: 10%;
-        border-image-source-radius: 30%;
-	}
-    */
 /* Button */
 
 	input[type="submit"],
@@ -4078,20 +4073,20 @@
 
 /* Footer */
 
-	#footer {
-		padding: 1rem 0 1rem 0 ;
-		background: #0e2104;
-		text-align: center;
-        margin-top:10rem;
-	}
+    #footer {
+        padding: 4rem 0 1rem 0 ;
+        background: #0e2104;
+        text-align: center;
+        /*margin-top:1rem;*/
+    }
 
-		#footer a {
-			color: rgba(255, 255, 255, 0.5);
-		}
+        #footer a {
+            color: rgba(255, 255, 255, 0.5);
+        }
 
-			#footer a:hover {
-				color: #40a00e;
-			}
+        #footer a:hover {
+            color: #40a00e;
+        }
 
 		#footer .copyright {
 			color: #bbb;
@@ -4103,29 +4098,30 @@
 
 		@media screen and (max-width: 736px) {
 
-			#footer {
-				padding: 10rem 0 0 0 ;
-			}
+/*#footer {
+            padding: 10rem 0 0 0 ;
+          }
+            */
 
 		}
 
 #w3button1,#w3button2{
     font-weight : bold;
     position: absolute;
-    top :212.9%;
+    top :189%;
     background: #d1ffba;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    border:4px solid #2d332f;
+    border:4px solid #2d2c0e;
     /* 滑鼠移到上面會變成甚麼圖案*/
     cursor: pointer;
     /* 重疊順序 越大越上面*/
     z-index: 20001;
 }
 
-#w3button1{ left:19.4%;}
-#w3button2{ left:73.2%;}
+#w3button1{ left:29.4%;}
+#w3button2{ left:63.2%;}
 .mySlides1{
     /* 陰影效果 : box-shadow: h-shadow v-shadow blur spread color inset*/
     box-shadow: 0 0 15px #000000;
@@ -4134,7 +4130,7 @@
     border-image-source: url(../../images/spring_woodenframe.png);
     border-image-slice: 10%;
     border-radius : 10%;
-    top :128%;
+    top :136%;
     left:50%;
     margin-left:-20%;
     height:59%;
@@ -4142,9 +4138,8 @@
     z-index: 1;
 }
 .spbg{
-    background-image:url(../../images/springbg.jpg);
-    /*background-image: url(../../images/spring_bg1.jpg);*/
-    /*background-color : hsla(100, 100%, 50%, 0.3);*/
+    background-image: url(../../images/springbackground1.jpg);
+    background-repeat: repeat;
     box-sizing: border-box ;
     height: 170px;
 }
@@ -4156,13 +4151,13 @@
             transition: height 1s;
 }
 p.sprh2{
-    color : #7fad68;
+    color : #fff;
     font-size : 70px;
     font-weight : bold;
     text-align:center;
 }
 p.sprp2{
-    color : #7fad68;
+    color : #fff;
     font-size : 15px;
     font-weight : bold;
     text-align:center;
@@ -4184,12 +4179,4 @@ p.sprp2{
     z-index:20002;
     left:52.5%;
     top :228%;
-}/*
-hr.hr1{  
-    height: 30px;
-    background: linear-gradient(-135deg, #f2f2f2 5px, transparent 0) 0 5px, linear-gradient(135deg, #f2f2f2 5px, #1e511e 0) 0 10px;
-    /*background-color: #f2f2f2;*//*
-    background-position: left bottom;
-    background-repeat: repeat-x;
-    background-size: 17px 20px;
 }/*
