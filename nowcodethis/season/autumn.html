@@ -1,12 +1,44 @@
 <!doctype html>
 <html>
+<!--<script>
+//這邊直接copy
+var images_all = new Array();
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+//usage:
+//192.168.1.17會匯入照片到各位的電腦裡
+readTextFile("http://10.105.13.1:8082/img_info", function(text){
+    var data = JSON.parse(text);
+    //console.log(data);
+    //第一張照片
+    var photo = data.img_info[1].url;
+    var ll=0;
+    while (ll<data.img_info.length){
+        //test為自己設的id，照片匯入的地方
+        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
+        document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
+        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
+        ll++;
+    }
+});
+</script>-->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>秋天展示</title>
     <link rel="stylesheet" href="css/flexslider.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="autumnmaple/js/jquery.flexslider.js"></script>
+    <script src="jquery/jquery.flexslider.js"></script>
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
             $('.flexslider').flexslider({
@@ -47,8 +79,9 @@
             <li><a href="spring.html">Spring 春天</a></li>
             <li><a href="summer/summer.html">Summer 夏天</a></li>
             <li><a href="autumn.html">Autumn 秋天</a></li>
-            <li><a href="winter.html">Winter 冬天</a></li>
-            <li><a href="elements.html">Elements</a></li>
+            <li><a href="winter/winter.html">Winter 冬天</a></li>
+            <li><a href="elements.html">FROG青蛙展示區</a></li>
+            <li><a href="elements.html">PLANTS植物展示區</a></li>
         </ul>
         </div>
     </header>

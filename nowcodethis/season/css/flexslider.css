@@ -113,6 +113,9 @@ html[xmlns] .flexslider .slides {
   width:500px;
   position: absolute;
 }
+.hello img{
+background:red;
+}
 .flexslider .slides {
   zoom: 1;
 }
