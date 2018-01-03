@@ -6,9 +6,10 @@ body {
 
 .gallery-container h1 {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 100px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: bold;
+    font-size: 200%;
     color: #58595a;
 }
 

@@ -35,7 +35,7 @@
 		quotes: none;
 	}
 
-	blockquote:before, blockquote:after, q:before, q:after {
+	blockquote:before, blockquote:before, q:before, q:before{
 		content: '';
 		content: none;
 	}
