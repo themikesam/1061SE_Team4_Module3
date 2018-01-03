@@ -23,7 +23,7 @@ function readTextFile(file, callback) {
 
 //usage:
 //192.168.1.17會匯入照片到各位的電腦裡
-readTextFile("http://192.168.1.17:8082/img_info", function(text){
+readTextFile("http://10.105.13.1:8082/img_info", function(text){
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
@@ -33,7 +33,7 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
         //test為自己設的id，照片匯入的地方
         //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
         document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-        document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
         ll++;
     }
 });
@@ -45,11 +45,13 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
 		<link rel="stylesheet" href="../assets/css/main_spring.css" />
 	</head>
 	<body class="subpage">
-        <div id="w3slide" class="w3-content w3-display-container">
+    <div id="w3slide" class="w3-content w3-display-container">
     <div id="test"></div>
+    <!--
     <img id="slide" class="mySlides1" src="../images/test7.jpg">
     <img id="slide" class="mySlides1" src="../images/test8.jpg">
     <img id="slide" class="mySlides1" src="../images/test9.jpg">
+    -->
     <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
     <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
     </div>
@@ -59,18 +61,18 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
 				<a href="#menu">Menu</a>
 			</header>
             
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="../index.html">Home</a></li>
+        <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="story.html">青蛙阿婆的故事</a></li>
                     <li><a href="spring.html">Spring 春天</a></li>
                     <li><a href="summer/summer.html">Summer 夏天</a></li>
                     <li><a href="autumn.html">Autumn 秋天</a></li>
                     <li><a href="winter.html">Winter 冬天</a></li>
                     <li><a href="elements.html">Elements</a></li>
-				</ul>
-			</nav>
+                </ul>
+            </nav>
 
         <!-- One -->
             <section id="One" class="wrapper style3">
@@ -92,17 +94,17 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
         <div class ="grass2">
         <img src="../images/spring_grass.png"/>
         </div>
+        <div class = "spbg">
         <p class = "sprh2">照片齁哩跨</p>
         <p class = "sprp2">春雨綿綿乍暖還寒的時節，此時也正是拜訪青蛙的好時機。只要在溫暖潮濕的夜晚，都有機會聆聽牠們的合唱，觀賞露天上映的歌舞劇青蛙求婚記</p>
+        </div>
                 <section id="two" class="wrapper style2">
                     <div class="inner">
                         <div class="box">
                             <div class="content">
                                 <header class="align-center">
                                 </header>
-                            <script>
-                            
-                            
+    <script>
     var slideIndex = 1;
     showDivs(slideIndex);
     function plusDivs(n) {
@@ -113,7 +115,7 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
         var x = document.getElementsByClassName("mySlides1");
         if (n > x.length) {
             slideIndex = 1
-        }    
+        }
         if (n < 1) {
             slideIndex = x.length
         }
