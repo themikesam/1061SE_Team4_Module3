@@ -110,9 +110,36 @@ html[xmlns] .flexslider .slides {
   -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
 }
+.introduce2{
+  font-family: Microsoft JhengHei;
+  font-weight: 900;
+  opacity:0.65;
+  font-size:20px;
+  margin-top:580px;
+  margin-left:100px;
+  width:500px;
+  height:200px;
+  background:#faf0e6;
+  border: 2px solid #ff0000;
+  position: absolute;
+  zoom: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+}
 .hello{
   margin-left:900px;
   margin-top:250px;
+  width:500px;
+  position: absolute;
+}
+.hello2{
+  margin-left:250px;
+  margin-top:800px;
   width:500px;
   position: absolute;
 }

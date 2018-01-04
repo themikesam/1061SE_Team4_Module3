@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<!--<script>
+<script>
 //這邊直接copy
 var images_all = new Array();
 function readTextFile(file, callback) {
@@ -19,6 +19,8 @@ function readTextFile(file, callback) {
 //192.168.1.17會匯入照片到各位的電腦裡
 readTextFile("http://10.105.13.1:8082/img_info", function(text){
     var data = JSON.parse(text);
+    document.getElementById("test").src="http://10.105.13.1:8082"+data.img_info[0].url;
+    /*
     //console.log(data);
     //第一張照片
     var photo = data.img_info[1].url;
@@ -30,8 +32,10 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
         document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
         ll++;
     }
+    */
+    
 });
-</script>-->
+</script>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -80,8 +84,8 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
             <li><a href="summer/summer.html">Summer 夏天</a></li>
             <li><a href="autumn.html">Autumn 秋天</a></li>
             <li><a href="winter/winter.html">Winter 冬天</a></li>
-            <li><a href="elements.html">FROG青蛙展示區</a></li>
-            <li><a href="elements.html">PLANTS植物展示區</a></li>
+            <li><a href="frog.html">FROG青蛙展示區</a></li>
+            <li><a href="butterfly.html">Butterflys植物展示區</a></li>
         </ul>
         </div>
     </header>
@@ -102,13 +106,58 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
         簡介:</br>
         </p>
     </div>
+    <div class="introduce2" id="introduce2">
+        <p>
+        俗名:</br>
+        性別:</br>
+        特徵:</br>
+        簡介:</br>
+        </p>
+    </div>
     <div class="hello" id="hello">
     <img src="images\autumnfrog2.png" style="width:200px;height:200px"/>
+    </div>
+    <div class="hello2" id="hello2">
+    <img src="images\aubutter.png" style="width:200px;height:200px"/>
     </div>
     <div class="flexslider" id="flexslider">
       <ul class="slides">
         <li>
-          <img src="images\test1.jpg" style="margin:auto;" />
+          <img id="test" src="images\test1.jpg" style="margin:auto;" />
+        </li>
+        <li>
+          <img src="images\test2.jpg" style="margin:auto;" />
+        </li>
+        <li>
+          <img src="images\test3.jpg" style="margin:auto;"/>
+        </li>
+        <li>
+          <img src="images\test4.jpg" style="margin:auto;"/>
+        </li>
+      </ul>
+    </div>
+    <!--Butter-->
+    <div id="leaves2">
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i> 
+    </div>
+    <div class="flexslider" id="flexslider" style="margin-left:650px">
+      <ul class="slides">
+        <li>
+          <img id="test" src="images\test1.jpg" style="margin:auto;" />
         </li>
         <li>
           <img src="images\test2.jpg" style="margin:auto;" />
