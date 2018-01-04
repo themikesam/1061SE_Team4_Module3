@@ -1848,7 +1848,7 @@
         /* 裡面綠色的框框*/
         .box .content {
             background: #13210f;
-            padding: 10rem 0 20rem 0;
+            padding: 1rem 0 22rem 0;
             margin-top: 10rem;
             margin-bottom: 10rem;
             margin-left: 17rem;
@@ -3088,6 +3088,7 @@
 			}
 
 			.wrapper.style3 header p {
+                font-family:Microsoft JhengHei;
                 font-size : 25px;
 				color: #99aa91;
                 font-weight : bold;
@@ -3528,6 +3529,7 @@
 				font-size: 1.25em;
 				color: #FFF;
 				text-decoration: none;
+                font-family:Microsoft JhengHei;
 			}
 
 				#header > .logo a:hover {
@@ -4108,7 +4110,8 @@
 #w3button1,#w3button2{
     font-weight : bold;
     position: absolute;
-    top :189%;
+
+    /*top :189%;*/
     background: #d1ffba;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -4130,10 +4133,10 @@
     border-image-source: url(../../images/spring_woodenframe.png);
     border-image-slice: 10%;
     border-radius : 10%;
-    top :136%;
+    /*top :136%;*/
     left:50%;
     margin-left:-20%;
-    height:59%;
+    height:35%;
     width:40%;
     z-index: 1;
 }
@@ -4144,7 +4147,7 @@
     height: 170px;
 }
 .spbg:hover{
-    height: 200px;
+    height: 250px;
 }
 .spbg{
     -webkit-transition: height 1s;
@@ -4152,11 +4155,13 @@
 }
 p.sprh2{
     color : #fff;
+    font-family:Microsoft JhengHei;
     font-size : 70px;
     font-weight : bold;
     text-align:center;
 }
 p.sprp2{
+    font-family:Microsoft JhengHei;
     color : #fff;
     font-size : 15px;
     font-weight : bold;
