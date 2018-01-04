@@ -1848,11 +1848,11 @@
         /* 裡面綠色的框框*/
         .box .content {
             background: #13210f;
-            padding: 1rem 0 22rem 0;
+            padding: 2.5rem 10rem 29rem 2.2rem;
             margin-top: 10rem;
             margin-bottom: 10rem;
-            margin-left: 17rem;
-            margin-right: 17rem;
+            margin-left: 2rem;
+            margin-right: 31.5rem;
             border: 50px solid #008000;
             border-image-source: url(../../images/spring_grass2.png);
             border-image-slice: 10%;
@@ -1862,6 +1862,7 @@
         #two{
             background-image: url(../../images/springbackground.jpg);
             background-repeat: repeat;
+            padding-bottom:10rem;
         }
 
 		.box > :last-child,
@@ -2704,7 +2705,7 @@
 			.wrapper.style2 button,
 			.wrapper.style2 .button {
 				background-color: #000;
-				color: #f2f2f2 !important;
+				color: black !important;
 			}
 
 				.wrapper.style2 input[type="submit"].alt,
@@ -4076,10 +4077,11 @@
 /* Footer */
 
     #footer {
+        
         padding: 4rem 0 1rem 0 ;
         background: #0e2104;
         text-align: center;
-        /*margin-top:1rem;*/
+        /*margin-top:10rem;*/
     }
 
         #footer a {
@@ -4110,7 +4112,6 @@
 #w3button1,#w3button2{
     font-weight : bold;
     position: absolute;
-
     /*top :189%;*/
     background: #d1ffba;
     -webkit-border-radius: 100px;
@@ -4123,8 +4124,17 @@
     z-index: 20001;
 }
 
-#w3button1{ left:29.4%;}
-#w3button2{ left:63.2%;}
+#w3button1{
+float:left;
+margin-left: -10px;
+margin-top : 22.5rem;
+}
+#w3button2{ 
+float:right;
+margin-left: 425px;
+margin-top : 22.5rem;
+}
+
 .mySlides1{
     /* 陰影效果 : box-shadow: h-shadow v-shadow blur spread color inset*/
     box-shadow: 0 0 15px #000000;
@@ -4134,10 +4144,10 @@
     border-image-slice: 10%;
     border-radius : 10%;
     /*top :136%;*/
-    left:50%;
-    margin-left:-20%;
+    /*left:50%;*/
+    /*margin-left:-20%;*/
     height:35%;
-    width:40%;
+    width:38%;
     z-index: 1;
 }
 .spbg{
