@@ -1820,20 +1820,20 @@
 			.box .image.fit img {
 				border-radius: 0;
 			}
-
+/*
 		.box header h2 {
 			margin-bottom: 2rem;
-		}
+		}*/
 
-		.box header p {
+		/*.box header p {
 			text-transform: uppercase;
 			font-size: .100rem;
 			font-weight: 300;
 			margin: 0 0 .25rem 0;
 			padding: 0 0 .75rem 0;
 			letter-spacing: .25rem;
-		}
-
+		}*/
+/*
 			.box header p:after {
 				content: '';
 				position: absolute;
@@ -1844,15 +1844,15 @@
 				width: 50%;
 				height: 1px;
 				background-color: rgba(0, 0, 0, 0.125);
-			}
+			}*/
         /* 裡面綠色的框框*/
         .box .content {
             background: #13210f;
-            padding: 2.5rem 10rem 29rem 2.2rem;
+            padding: 2.5rem 2rem 29rem 2.2rem;
             margin-top: 10rem;
             margin-bottom: 10rem;
-            margin-left: 2rem;
-            margin-right: 34.5%;
+            margin-left: 1rem;
+            margin-right: 32rem;
             border: 50px solid #008000;
             border-image-source: url(../../images/spring_grass2.png);
             border-image-slice: 10%;
@@ -1927,7 +1927,7 @@
 			input[type="button"].icon:before,
 			button.icon:before,
 			.button.icon:before {
-				margin-right: 0.5rem;
+				/*margin-right: 0.5rem;*/
 			}
 
 		input[type="submit"].fit,
@@ -4145,7 +4145,7 @@ margin-top : 22.5rem;
     border-radius : 10%;
     /*top :136%;*/
     /*left:50%;*/
-    /*margin-left:-20%;*/
+    /*margin-right:2rem;*/
     height:35%;
     width:38%;
     z-index: 1;
@@ -4177,21 +4177,3 @@ p.sprp2{
     font-weight : bold;
     text-align:center;
 }
-/*
-.grass{
-    position: absolute;
-    z-index:20002;
-    top :228%; 
-}
-.grass1{
-    position: absolute;
-    z-index:20002;
-    left:45.5%;
-    top :228%;
-}
-.grass2{
-    position: absolute;
-    z-index:20002;
-    left:52.5%;
-    top :228%;
-}/*
