@@ -244,7 +244,7 @@
 	}
 
 	.row.uniform > * > :last-child {
-		margin-bottom: 0;
+		/*margin-bottom: 0;*/
 	}
 
 	.row.\30 \25 > * {
@@ -1736,7 +1736,7 @@
 		border: solid 1px;
 		font-family: "Courier New", monospace;
 		font-size: 0.9rem;
-		margin: 0 0.25rem;
+		/*margin: 0 0.25rem;*/
 		padding: 0.25rem 0.65rem;
 	}
 
@@ -1756,7 +1756,7 @@
 
 	hr {
 		border: 0;
-		border-bottom: solid 1px;
+		/*border-bottom: solid 1px;*/
 		margin: 2rem 0;
 	}
 
@@ -1813,7 +1813,7 @@
     }
 */
 		.box .image.fit {
-			margin: 0;
+			/*margin: 0;*/
 			border-radius: 0;
 		}
 
@@ -1850,9 +1850,9 @@
             background: #13210f;
             padding: 2.5rem 2rem 29rem 2.2rem;
             margin-top: 10rem;
-            margin-bottom: 10rem;
-            margin-left: 1rem;
-            margin-right: 32rem;
+            margin-bottom: 10rem auto;
+            margin-left: 1rem auto;
+            margin-right: 30rem ;
             border: 50px solid #008000;
             border-image-source: url(../../images/spring_grass2.png);
             border-image-slice: 10%;
@@ -3673,9 +3673,9 @@
 		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: rgba(0, 0, 0, 0.95);
+		background-image: url(../../images/grass.png);
 		box-shadow: none;
-		color: #000;
+		color: #57ff4f;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3703,8 +3703,11 @@
 
 					#menu > ul.links > li > a:not(.button) {
 						border: 0;
-						border-top: solid 1px rgba(255, 255, 255, 0.125);
-						color: rgba(255, 255, 255, 0.5);
+						border-top: solid 10px rgba(255, 255, 255, 0.125);
+                        font-family:Microsoft JhengHei;
+                        font-weight:bold;
+						color: #fff;
+                        font-size: 15px;
 						display: block;
 						line-height: 3.5rem;
 						text-decoration: none;
@@ -3712,7 +3715,7 @@
 					}
 
 						#menu > ul.links > li > a:not(.button):hover {
-							color: #FFF;
+							color: #30e028;
 						}
 
 					#menu > ul.links > li > .button {
@@ -3732,7 +3735,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #999999;
+			color: #0bba03;
 			cursor: pointer;
 			display: block;
 			height: 3.25rem;
@@ -3955,7 +3958,7 @@
 
 			.banner > article h2 {
 				font-size: 7rem;
-				margin-bottom: 0;
+				/*margin-bottom: 0;*/
 				color: #FFF;
 				font-weight: 300;
 			}
@@ -4047,7 +4050,7 @@
 			}
 
 			.banner > article p {
-				margin-bottom: 1rem;
+				/*margin-bottom: 1rem;*/
 			}
 
 			.banner > article h2 {
@@ -4132,7 +4135,7 @@ margin-top : 22.5rem;
 #w3button2{ 
 float:right;
 margin-left: 425px;
-margin-top : 22.5rem;
+margin-top : 22.5rem ;
 }
 
 .mySlides1{
@@ -4154,7 +4157,7 @@ margin-top : 22.5rem;
     background-image: url(../../images/springbackground1.jpg);
     background-repeat: repeat;
     box-sizing: border-box ;
-    height: 170px;
+    height: 200px;
 }
 .spbg:hover{
     height: 250px;
@@ -4166,7 +4169,7 @@ margin-top : 22.5rem;
 p.sprh2{
     color : #fff;
     font-family:Microsoft JhengHei;
-    font-size : 70px;
+    font-size : 80px;
     font-weight : bold;
     text-align:center;
 }
