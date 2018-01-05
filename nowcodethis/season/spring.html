@@ -111,9 +111,15 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
                                 <img id="slide" class="mySlides1" src="../images/test9.jpg">
                                 <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
                                 <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
-            <header class="align-center">
-            </header>
-    <script>
+                                <div class="frogintro" id="frogintro">
+                                <p>
+                                俗名:</br>
+                                叫聲:</br>
+                                特徵:</br>
+                                </p>
+                                </div>
+<header class="align-center"></header>
+<script>
     var slideIndex = 1;
     showDivs(slideIndex);
     function plusDivs(n) {
@@ -136,11 +142,11 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
         //指定的毫秒数后调用函数或计算表达式
         setTimeout(showDivs, 1000);
     } 
-    </script>
-                            </div>
-					</div>
-				</div>
-			</section>
+</script>
+                        </div>
+                    </div>
+                </div>
+        </section>
 		<!-- Footer -->
 		<footer id="footer">
                 <div class="container">
