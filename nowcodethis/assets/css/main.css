@@ -1662,7 +1662,7 @@
 
 		p.special {
 			text-transform: uppercase;
-			font-size: .75rem;
+			font-size: .85rem;
 			font-weight: 300;
 			margin: 0 0 .5rem 0;
 			padding: 0 0 1rem 0;
@@ -1693,7 +1693,7 @@
 		}
 
 	h2 {
-		font-size: 1.75rem;
+		font-size: 2.5rem;
 	}
 
 	h3 {
@@ -1827,7 +1827,7 @@
 
 		.box header p {
 			text-transform: uppercase;
-			font-size: .75rem;
+			font-size: .85rem;
 			font-weight: 300;
 			margin: 0 0 .25rem 0;
 			padding: 0 0 .75rem 0;
@@ -3069,7 +3069,7 @@
 			}
 
 			.wrapper.style2 header p {
-				color: #999999;
+				color: #808080;
 			}
 
 			.wrapper.style2 table tbody tr {
@@ -3298,7 +3298,7 @@
 			}
 
 			.wrapper.style3 header p {
-				color: #999999;
+				color: #808080;
 			}
 
 			.wrapper.style3 table tbody tr {
@@ -3332,7 +3332,7 @@
 
 			.wrapper.style3 p {
 				text-transform: uppercase;
-				font-size: .75rem;
+				font-size: .85rem;
 				font-weight: 300;
 				margin: 0 0 .5rem 0;
 				padding: 0 0 1rem 0;
@@ -3822,11 +3822,11 @@
 			-webkit-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background-color: transparent;
+			background-color:transparent;
 			box-shadow: none;
 			overflow: hidden;
 			position: absolute;
-			top: 1.5em;
+			top: 1em;
 		}
 
 			#header.alt h1 {
@@ -4144,7 +4144,7 @@
 				top: 0;
 				left: 0;
 				background: #000;
-				opacity: 0.35;
+				opacity: 0.1;
 			}
 
 			.banner > article .inner {
@@ -4161,7 +4161,7 @@
 			.banner > article h2 {
 				font-size: 7rem;
 				margin-bottom: 0;
-				color: #FFF;
+				color: #ffffff;
 				font-weight: 300;
 			}
 
@@ -4170,9 +4170,9 @@
 				}
 
 			.banner > article p {
-				color: rgba(255, 255, 255, 0.65);
+				color: rgb(255, 255, 255);
 				text-transform: uppercase;
-				font-size: 1rem;
+				font-size: 20px;
 				font-weight: 300;
 				margin: 0;
 				padding-bottom: 1.75rem;
