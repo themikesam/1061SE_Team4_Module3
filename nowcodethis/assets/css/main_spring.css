@@ -4180,22 +4180,43 @@ p.sprp2{
     font-weight : bold;
     text-align:center;
 }
+/*.frogintro{
+    margin-bottom:10px;
+    margin-left:125%;
+    width:450px;
+    background: #bbdbba;
+    border: 10px solid #f4a460;
+    border-image-source: url(../../images/introframe.png);
+    border-image-slice: 10%;
+    border-radius : 10%;
+    position: relative;
+    zoom: 1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+}*/
 .frogintro{
   font-family: Microsoft JhengHei;
   font-weight: bold;
   font-size:20px;
-  color : black;
+  color :black;
   margin-top:5px;
   margin-left:700px;
   width:450px;
   height:200px;
   background:#bbdbba;
-  border: 20px;
+  border: 20px solid black;
   border-image-source: url(../../images/introframe.png);
   border-image-slice: 10%;
   border-radius : 10%;
   position: absolute;
   zoom: 1;
+    -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
