@@ -1799,7 +1799,10 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: #DEB887;
+				background:url(../../season/winter/圖片/bg.jpg);
+				background-repeat:no-repeat;
+				background-size:100%;
+				opacity: 0;
 				height: 100%;
 				left: 0;
 				opacity: 0.75;
