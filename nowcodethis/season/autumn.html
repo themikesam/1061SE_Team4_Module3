@@ -1,25 +1,26 @@
 <!doctype html>
 <html>
 <script>
-//這邊直接copy
-var images_all = new Array();
-function readTextFile(file, callback) {
+  //這邊直接copy
+  var images_all = new Array();
+
+  function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
+      }
     }
     rawFile.send(null);
-}
+  }
 
-//usage:
-//192.168.1.17會匯入照片到各位的電腦裡
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
+  //usage:
+  //192.168.1.17會匯入照片到各位的電腦裡
+  readTextFile("http://10.105.13.1:8082/img_info", function (text) {
     var data = JSON.parse(text);
-    document.getElementById("test").src="http://10.105.13.1:8082"+data.img_info[0].url;
+    document.getElementById("test").src = "http://10.105.13.1:8082" + data.img_info[0].url;
     /*
     //console.log(data);
     //第一張照片
@@ -33,92 +34,114 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
         ll++;
     }
     */
-    
-});
+
+  });
 </script>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>秋天展示</title>
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script src="jquery/jquery.flexslider.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        $(window).load(function() {
-            $('.flexslider').flexslider({
-        animation: "fade"});
-        });
-    </script>
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../assets/css/main-autumn.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>秋天展示</title>
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="jquery/jquery.flexslider.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function () {
+      $('.flexslider').flexslider({
+        animation: "fade"
+      });
+    });
+  </script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/main-autumn.css" />
 </head>
+
 <body>
-<div class="subpage">
+  <div class="subpage">
     <div id="leaves">
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i> 
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
     </div>
     <!-- Header -->
     <header id="header">
-        <div class="logo"><a href="../index.html">秋天展示區 <span>青蛙阿婆的故事</span></a></div>
-        <div id="menu2">
+      <div class="logo">
+        <a href="../index.html">秋天展示區
+          <span>青蛙阿婆的故事</span>
+        </a>
+      </div>
+      <div id="menu2">
         <ul>
-            <li style="color:black;"><a href="story/story.html">青蛙阿婆的故事</a></li>
-            <li><a href="spring.html">Spring 春天</a></li>
-            <li><a href="summer/summer.html">Summer 夏天</a></li>
-            <li><a href="autumn.html">Autumn 秋天</a></li>
-            <li><a href="winter/winter.html">Winter 冬天</a></li>
-            <li><a href="./nature/frog.html">FROG青蛙展示區</a></li>
-            <li><a href="./nature/butterfly.html">Butterflys植物展示區</a></li>
-            <li><a href="../weather/index.php">天氣資訊</a></li>
+          <li style="color:black;">
+            <a href="story/story.html">青蛙阿婆的故事</a>
+          </li>
+          <li>
+            <a href="spring.html">Spring 春天</a>
+          </li>
+          <li>
+            <a href="summer/summer.html">Summer 夏天</a>
+          </li>
+          <li>
+            <a href="autumn.html">Autumn 秋天</a>
+          </li>
+          <li>
+            <a href="winter/winter.html">Winter 冬天</a>
+          </li>
+          <li>
+            <a href="./nature/frog.html">FROG青蛙展示區</a>
+          </li>
+          <li>
+            <a href="./nature/butterfly.html">Butterflys植物展示區</a>
+          </li>
+          <li>
+            <a href="../weather/index.php">天氣資訊</a>
+          </li>
         </ul>
-        </div>
+      </div>
     </header>
     <!-- One -->
     <section id="One" class="wrapper style3">
-        <div class="inner">
-            <header class="align-center" style="height:60px">
-                <p style="color:#fff">秋天使人放慢腳步,欣賞這樣的詩情畫意</p>
-                <h2>Autumn</h2>
-            </header>
-        </div>
+      <div class="inner">
+        <header class="align-center" style="height:60px">
+          <p style="color:#fff">秋天使人放慢腳步,欣賞這樣的詩情畫意</p>
+          <h2>Autumn</h2>
+        </header>
+      </div>
     </section>
     <div class="introduce" id="introduce">
-        <p>
+      <p>
         俗名:</br>
         性別:</br>
         特徵:</br>
         簡介:</br>
-        </p>
+      </p>
     </div>
     <div class="introduce2" id="introduce2">
-        <p>
+      <p>
         俗名:</br>
         性別:</br>
         特徵:</br>
         簡介:</br>
-        </p>
+      </p>
     </div>
     <div class="hello" id="hello">
-    <img src="images\autumnfrog2.png" style="width:200px;height:200px"/>
+      <img src="images\autumnfrog2.png" style="width:200px;height:200px" />
     </div>
     <div class="hello2" id="hello2">
-    <img src="images\aubutter.png" style="width:200px;height:200px"/>
+      <img src="images\aubutter.png" style="width:200px;height:200px" />
     </div>
     <div class="flexslider" id="flexslider">
       <ul class="slides">
@@ -129,30 +152,30 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
           <img src="images\test2.jpg" style="margin:auto;" />
         </li>
         <li>
-          <img src="images\test3.jpg" style="margin:auto;"/>
+          <img src="images\test3.jpg" style="margin:auto;" />
         </li>
         <li>
-          <img src="images\test4.jpg" style="margin:auto;"/>
+          <img src="images\test4.jpg" style="margin:auto;" />
         </li>
       </ul>
     </div>
     <!--Butter-->
     <div id="leaves2">
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i>
-    <i></i> 
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
     </div>
     <div class="flexslider" id="flexslider" style="margin-left:650px">
       <ul class="slides">
@@ -163,27 +186,44 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
           <img src="images\test2.jpg" style="margin:auto;" />
         </li>
         <li>
-          <img src="images\test3.jpg" style="margin:auto;"/>
+          <img src="images\test3.jpg" style="margin:auto;" />
         </li>
         <li>
-          <img src="images\test4.jpg" style="margin:auto;"/>
+          <img src="images\test4.jpg" style="margin:auto;" />
         </li>
       </ul>
     </div>
     <!-- Footer -->
     <footer id="footer">
-        <div class="container">
-            <ul class="icons">
-                <li><a href="tel:+886(0)912431655" class="icon fa-phone"><span class="label">Contact</span></a></li>
-                <li><a href="https://www.facebook.com/froggrandmashome/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="https://www.instagram.com/explore/locations/256186917/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="http://frog.18851.com.tw/index.html" class="icon fa-heart"><span class="label">Website</span></a></li>
-            </ul>
-        </div>
-        <div class="copyright">
-            &copy; 國立暨南國際大學資訊管理學系. 版權所有.
-        </div>
+      <div class="container">
+        <ul class="icons">
+          <li>
+            <a href="tel:+886(0)912431655" class="icon fa-phone">
+              <span class="label">Contact</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/froggrandmashome/" class="icon fa-facebook">
+              <span class="label">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/explore/locations/256186917/" class="icon fa-instagram">
+              <span class="label">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://frog.18851.com.tw/index.html" class="icon fa-heart">
+              <span class="label">Website</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        &copy; 國立暨南國際大學資訊管理學系. 版權所有.
+      </div>
     </footer>
-</div>
+  </div>
 </body>
+
 </html>
