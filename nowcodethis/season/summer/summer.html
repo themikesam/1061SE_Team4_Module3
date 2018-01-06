@@ -1,5 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript">
+//這邊直接copy
+var images_all = new Array();
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+//usage:
+readTextFile("http://10.105.13.1:8082/img_info", function(text){
+    var data = JSON.parse(text);
+    var ll=0;
+    while (ll<data.img_info.length){
+        document.getElementById("testkk").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        if(data.img_info[ll].classification=='青蛙')
+        {
+            document.getElementById("testkk2").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        }
+        if(data.img_info[ll].classification=='蝴蝶')
+        {
+            document.getElementById("testkk3").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        }
+        ll++;
+    }
+});
+</script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +91,7 @@
                 <nav class="navbar">
                     <div class="tm-navbar-bg">
                         
-                        <a class="navbar-brand text-uppercase" href="#"><i class="fa fa-picture-o tm-brand-icon"></i>Summer</a>
+                        <a class="navbar-brand text-uppercase" href="#"><i class="fa fa-sun-o tm-brand-icon"></i>Summer</a>
 
                         <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
                             &#9776;
@@ -91,122 +124,7 @@
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="1" data-page-type="gallery">
                             <div class="tm-img-gallery-container">
-                                <div class="tm-img-gallery gallery-one">
-                                <!-- Gallery One pop up connected with JS code below -->
-
-                                    <!-- 一張圖 開始 -->
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 1.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title"> 青蛙 <span><strong> One </strong></span></h2> <!-- 在圖片上的字 -->
-                                                <p class="tm-figure-description">Set true or false in HTML script tag for this page black and white.</p> <!--指標移到圖片-->
-                                                <a href="圖庫/frog 1.jpg">View more</a> <!-- 點擊圖片後連結 -->
-                                            </figcaption>           
-                                        </figure>
-                                    </div>
-                                    <!-- 結束 -->
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 2.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>Two</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/frog 2.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 3.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>Three</strong></span></h2>
-                                                <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                <a href="圖庫/frog 3.jpg">View more</a>
-                                            </figcaption>           
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 4.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>Four</strong></span></h2>
-                                                <p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>
-                                                <a href="圖庫/frog 4.jpg">View more</a>
-                                            </figcaption>           
-                                        </figure>
-                                    </div>  
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 5.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>Five</strong></span></h2>
-                                                <p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                                <a href="圖庫/frog 5.jpg">View more</a>
-                                            </figcaption>           
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 1.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>ONE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 1.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 2.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>TWO</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 2.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 3.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>THREE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 3.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 4.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>FOUR</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 4.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 5.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>FIVE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 5.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                                                       
-                                </div>                                 
+                                <div class="tm-img-gallery gallery-one" id="testkk"></div>
                             </div>
                         </div>                                                    
                     </div>                    
@@ -219,64 +137,7 @@
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="2" data-page-type="gallery">
                             <div class="tm-img-gallery-container">
-                                <div class="tm-img-gallery gallery-two">
-                                <!-- Gallery Two pop up connected with JS code below -->
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 1.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>ONE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/frog 1.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 2.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>Two</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/frog 2.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 3.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>THREE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/frog 3.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 4.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>FOUR</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/frog 4.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/frog 5.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">青蛙 <span><strong>FIVE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/frog 5.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    
-
+                                <div class="tm-img-gallery gallery-two" id="testkk2">
                                 </div>                                 
                             </div>
                         </div>                      
@@ -288,64 +149,8 @@
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="3" data-page-type="gallery">                        
                             <div class="tm-img-gallery-container">
-                                <div class="tm-img-gallery gallery-three">
-                                <!-- Gallery Two pop up connected with JS code below -->
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 1.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>ONE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 1.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 2.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>TWO</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 2.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 3.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>THREE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 3.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 4.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>FOUR</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 4.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="grid-item">
-                                        <figure class="effect-sadie">
-                                            <img src="圖庫/butterfly 5.jpg" alt="Image" class="img-fluid tm-img">
-                                            <figcaption>
-                                                <h2 class="tm-figure-title">蝴蝶 <span><strong>FIVE</strong></span></h2>
-                                                <p class="tm-figure-description">Set true or false in HTML page line number 40 to turn on off page color.</p>
-                                                <a href="圖庫/butterfly 5.jpg">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    
+                                <div class="tm-img-gallery gallery-three" id="testkk3">
+                                
                                                                                                                                    
                                 </div>                                 
                             </div> <!-- .tm-img-gallery-container -->
@@ -398,14 +203,14 @@
                                         <div class="tm-flex">
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
                                                 <h2 class="tm-text-title"><a href="../story/story.html">Story 故事</a></h2>
-                                                <p class="tm-text"><a href="../story.html"> <img src = "圖庫/book.jpg"> </a></p>
+                                                <p class="tm-text"><a href="../story/story.html"> <img src = "圖庫/book.jpg"> </a></p>
                                             </div>
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
-                                                <h2 class="tm-text-title"><a href="../../elements.html">Elements 部件</h2>
-                                                <p class="tm-text"><a href="../element.html"> <img src = "圖庫/tool.jpg"> </a></p>     
+                                                <h2 class="tm-text-title"><a href="../../weather/js/weather.php">Weather 天氣</h2>
+                                                <p class="tm-text"><a href="../../weather/js/weather.php"> <img src = "圖庫/weather.jpg"> </a></p>     
                                             </div>
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
-                                                <h2 class="tm-text-title"><a href="../../index.html">回首頁</a></h2>
+                                                <h2 class="tm-text-title"><a href="../../index.html">Home 回首頁</a></h2>
                                                 <p class="tm-text"><a href="../../index.html"> <img src = "圖庫/home.jpg"> </a></p>     
                                             </div>
                                         </div>

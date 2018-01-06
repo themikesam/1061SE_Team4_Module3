@@ -1519,7 +1519,6 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/snow.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -1539,7 +1538,7 @@
 			}
 
 			.wrapper.style3 h1, .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4, .wrapper.style3 h5, .wrapper.style3 h6 {
-                color: #5cf713;
+                color: #fff;
                 font-size : 30px;
                 /* -moz-对应 Firefox, -webkit-对应 Safari and Chrome,-o- for Opera-ms- for Internet Explorer*/
                 -webkit-transition: all 1s ease-in-out;
@@ -1550,7 +1549,7 @@
 			}
              .wrapper.style3 h2:hover {
                  font-size : 50px;
-                 color :#b2ff8e;
+                 color :#fff;
                 -webkit-transform: rotate(360deg);
                 -moz-transform: rotate(360deg);
                 -o-transform: rotate(360deg);
@@ -1800,7 +1799,10 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: #3e6d26;
+				background:url(../../season/winter/圖片/bg.jpg);
+				background-repeat:no-repeat;
+				background-size:100%;
+				opacity: 0;
 				height: 100%;
 				left: 0;
 				opacity: 0.75;
@@ -2146,7 +2148,7 @@
 	}
 
 	#header {
-		background: rgb(17, 51, 29);
+		background: #000;
 		color: #a6a6a6;
 		cursor: default;
 		height: 3.25em;
@@ -2721,8 +2723,8 @@
 
 	#footer {
 		padding: 1rem 0 1rem 0 ;
-		background: #0e2104;
 		text-align: center;
+		height: 100px;
 	}
 
 		#footer a {
