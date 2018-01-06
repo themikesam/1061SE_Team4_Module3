@@ -21,20 +21,17 @@
   readTextFile("http://10.105.13.1:8082/img_info", function (text) {
     var data = JSON.parse(text);
     var op=0;
-    for(i=0;i<data.img_info.length;i++){
-        document.getElementById("butterfly").innerHTML += "<li><img id="+i+" style='margin-auto'/></li>";
-        document.getElementById(i).src = "http://10.105.13.1:8082" + data.img_info[i].url;
-    }
+    var op2=0;
     while (op < data.img_info.length) {
-      //test為自己設的id，照片匯入的地方
-      //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-      document.getElementById("frog").innerHTML += "<li><img id='"+op+"' style='margin-auto'/></li>";
+      document.getElementById("frog").innerHTML += "<li><img id='"+op+"' /></li>";
+      document.getElementById("butterfly").innerHTML += "<li><img id='"+op2+"'/></li>";
       document.getElementById(op).src = "http://10.105.13.1:8082" + data.img_info[op].url;
+      document.getElementById(op2).src = "http://10.105.13.1:8082" + data.img_info[op2].url;
       op++;
+      op2++;
     }
     /*
-    //console.log(data);
-    //第一張照片
+    console.log(data);
     var photo = data.img_info[1].url;
     var ll=0;
     while (ll<data.img_info.length){
@@ -179,7 +176,6 @@
     </div>
     <div class="flexslider" id="flexslider" style="margin-left:650px">
       <ul id="butterfly" class="slides">
-
       </ul>
     </div>
     <!-- Footer -->
@@ -214,5 +210,4 @@
     </footer>
   </div>
 </body>
-
 </html>
