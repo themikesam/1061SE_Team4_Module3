@@ -248,6 +248,7 @@ $(function() {
 		};
 	
 	})();
+    
     $.ajax({
             url: 'http://10.105.13.1:8082/img_info',
             type: 'get',
