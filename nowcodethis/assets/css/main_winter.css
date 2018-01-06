@@ -1519,7 +1519,6 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/snow.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -1800,7 +1799,7 @@
 				transition-delay: 1.25s;
 				content: '';
 				display: block;
-				background-color: #fdb;
+				background-color: #DEB887;
 				height: 100%;
 				left: 0;
 				opacity: 0.75;
