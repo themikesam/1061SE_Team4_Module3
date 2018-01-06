@@ -4232,7 +4232,7 @@ p.sprp2{
   margin-left:700px;
   width:450px;
   height:300px;
-  background:#bbdbba;
+  background:rgba(255,255,255,0.3);
   border: 30px solid black;
   border-image-source: url(../../images/introframe.png);
   border-image-slice: 10%;
@@ -4255,7 +4255,7 @@ p.sprp2{
   margin-left:-60px;
   width:450px;
   height:300px;
-  background:#dae2cc;
+  background:rgba(255,255,255,0.3);
   border: 30px solid #ff0000;
   border-image-source: url(../../images/introframe2.png);
   border-image-slice: 10%;
