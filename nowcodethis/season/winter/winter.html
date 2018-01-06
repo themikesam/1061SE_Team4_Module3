@@ -36,17 +36,17 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
     <style>
         /* Demo Styles */
         @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
-        body{
-            background-image:url('圖片/snow.jpg');
+        body {
+			background-color:#000044;
+			background:url(圖片/bg.jpg);
 			background-repeat:no-repeat;
-			background-size:cover;
-			background-position: center; 
-			height:600px;
-			weight:400px;
-            font-family: 'Roboto Slab', sans-serif;
-            font-weight: 300;
-            overflow: hidden;
-        }
+			background-size:100%;
+			repeat-x;margin:0px;
+			overflow:hidden;
+		}
+		a {
+		color:#0078ff;
+		}	
         .rotating-slider ul.slides li{
             color: #fff
         }
@@ -76,7 +76,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
         }
     </style>
 </head>
-<body class="subpage">
+<body onLoad="init()">
    <!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="../../index.html">HOME <span>by FrogMaMa</span></a></div>
@@ -92,6 +92,9 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                     <li><a href="../summer/summer.html">Summer 夏天</a></li>
                     <li><a href="../autumn.html">Autumn 秋天</a></li>
                     <li><a href="winter.html">Winter 冬天</a></li>
+					<li><a href="../nature\frog.html">Frog&ensp;青蛙展示區</a></li>
+                    <li><a href="../nature\butterfly.html">Butterfly&ensp;蝴蝶展示區</a></li>
+                    <li><a href="../..\weather\index.php">Weather&ensp;未來天氣</a></li>
 				</ul>
 			</nav>
 
@@ -161,6 +164,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
 			<script src="../../assets/js/skel.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
+	<script type="text/javascript" src="js/ThreeCanvas.js"></script>
 
 </body>
 </html>
