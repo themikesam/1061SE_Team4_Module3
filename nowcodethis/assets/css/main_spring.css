@@ -1862,7 +1862,7 @@
         #two{
             background-image: url(../../images/springbackground.jpg);
             background-repeat: repeat;
-            padding-bottom:10rem;
+            padding-bottom:13rem;
         }
 
 		.box > :last-child,
@@ -4124,7 +4124,7 @@
     /* 滑鼠移到上面會變成甚麼圖案*/
     cursor: pointer;
     /* 重疊順序 越大越上面*/
-    z-index: 20001;
+    z-index: 20000;
 }
 
 #w3button1{
@@ -4134,7 +4134,7 @@ margin-top : 22.5rem;
 }
 #w3button2{ 
 float:right;
-margin-left: 425px;
+margin-left: 450px;
 margin-top : 22.5rem ;
 }
 
@@ -4149,9 +4149,33 @@ margin-top : 22.5rem ;
     /*top :136%;*/
     /*left:50%;*/
     /*margin-right:2rem;*/
-    height:35%;
-    width:38%;
+    height:400px;
+    width:550px;
     z-index: 1;
+}
+
+.mySlides2{
+    box-shadow: 0 0 15px #000000;
+    position: absolute;
+    border: 40px solid #3d1c00;
+    /*border-image-source: url(../../images/spring_woodenframe.png);
+    border-image-slice: 10%;
+    border-radius : 10%;*/
+    /*top :136%;*/
+    /*left:50%;*/
+    /*margin-right:2rem;*/
+    /*height:35%;
+    width:38%;*/
+    width:450px;
+    height:350px;
+    z-index: 1;
+      -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .spbg{
     background-image: url(../../images/springbackground1.jpg);
@@ -4175,29 +4199,25 @@ p.sprh2{
 }
 p.sprp2{
     font-family:Microsoft JhengHei;
-    color : #fff;
+    color : #000;
     font-size : 15px;
     font-weight : bold;
     text-align:center;
 }
-/*.frogintro{
-    margin-bottom:10px;
-    margin-left:125%;
-    width:450px;
-    background: #bbdbba;
-    border: 10px solid #f4a460;
-    border-image-source: url(../../images/introframe.png);
-    border-image-slice: 10%;
-    border-radius : 10%;
-    position: relative;
-    zoom: 1;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-}*/
+.butterflyy{
+    background: red;
+    margin-top:10rem;
+    margin-left:10rem;
+    width:500px;
+    height:500px;
+    padding-top: 4rem;
+    padding-left:4rem;
+    padding-right:4rem;
+}
+.butterfly{
+    background: #13210f;
+    margin-bottom:100px;
+}
 .frogintro{
   font-family: Microsoft JhengHei;
   font-weight: bold;
@@ -4214,7 +4234,7 @@ p.sprp2{
   border-radius : 10%;
   position: absolute;
   zoom: 1;
-    -webkit-border-radius: 4px;
+  -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
