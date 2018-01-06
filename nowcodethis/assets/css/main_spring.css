@@ -3716,6 +3716,7 @@
 
 						#menu > ul.links > li > a:not(.button):hover {
 							color: #30e028;
+                            font-size: 18px;
 						}
 
 					#menu > ul.links > li > .button {
@@ -4157,25 +4158,25 @@ margin-top : 22.5rem ;
 .mySlides2{
     box-shadow: 0 0 15px #000000;
     position: absolute;
-    border: 40px solid #3d1c00;
-    /*border-image-source: url(../../images/spring_woodenframe.png);
+    border: 40px solid red;
+    border-image-source: url(../../images/butterflyframe.png);
     border-image-slice: 10%;
-    border-radius : 10%;*/
+    border-radius : 10%;
     /*top :136%;*/
     /*left:50%;*/
     /*margin-right:2rem;*/
     /*height:35%;
     width:38%;*/
-    width:450px;
-    height:350px;
+    width:530px;
+    height:450px;
     z-index: 1;
-      -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .spbg{
     background-image: url(../../images/springbackground1.jpg);
@@ -4205,13 +4206,17 @@ p.sprp2{
     text-align:center;
 }
 .butterflyy{
-    background: red;
+    background: black;
+    border: 45px solid red;
+    border-image-source: url(../../images/butterflyframe2.png);
+    border-image-slice: 10%;
+    border-radius : 10%;
     margin-top:10rem;
-    margin-left:10rem;
-    width:500px;
-    height:500px;
-    padding-top: 4rem;
-    padding-left:4rem;
+    margin-left:8rem;
+    width:660px;
+    height:600px;
+    padding-top: 2rem;
+    padding-left:1rem;
     padding-right:4rem;
 }
 .butterfly{
@@ -4226,10 +4231,33 @@ p.sprp2{
   margin-top:5px;
   margin-left:700px;
   width:450px;
-  height:200px;
+  height:300px;
   background:#bbdbba;
-  border: 20px solid black;
+  border: 30px solid black;
   border-image-source: url(../../images/introframe.png);
+  border-image-slice: 10%;
+  border-radius : 10%;
+  position: absolute;
+  zoom: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.frogintro2{
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
+  font-size:20px;
+  margin-top:-800px;
+  margin-left:-60px;
+  width:450px;
+  height:300px;
+  background:#dae2cc;
+  border: 30px solid #ff0000;
+  border-image-source: url(../../images/introframe2.png);
   border-image-slice: 10%;
   border-radius : 10%;
   position: absolute;
