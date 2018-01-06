@@ -24,7 +24,7 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
     //第一張照片
     var photo = data.img_info[1].url;
     var ll=0;
-    while (ll<data.img_info.length){
+    while (ll<data.img_info.length && data.img_info[ll].classification=='青蛙'){
         //test為自己設的id，照片匯入的地方
         //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
         document.getElementById("test").innerHTML += "<div  class='col-sm-6 col-md-4'><div class='thumbnail'><a class='lightbox' href='"+"http://192.168.1.17:8082"+data.img_info[ll].url+"'><img id='"+ll+"'></a><div class='caption'><h3 id='h"+ll+"'>Thumbnail label</h3><p id='t"+ll+"'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div>";
