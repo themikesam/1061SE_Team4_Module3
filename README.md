@@ -1,6 +1,8 @@
 # SoftwareEngineering
 ## 1061軟體工程開發
 ---
+
+- [HTML DEMO](https://themikesam.github.io/1061SE_Team4_Module3/nowcodethis/index.html)
 - 展示模組
     - Clone後請直接瀏覽`nowcodethis/index.html`
 
