@@ -7,45 +7,48 @@
 
 <html>
 <script>
-//這邊直接copy
-var images_all = new Array();
-function readTextFile(file, callback) {
+  //這邊直接copy
+  var images_all = new Array();
+
+  function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
+      }
     }
     rawFile.send(null);
-}
+  }
 
-//usage:
-//192.168.1.17會匯入照片到各位的電腦裡
-readTextFile("http://192.168.1.17:8082/img_info", function(text){
+  //usage:
+  //192.168.1.17會匯入照片到各位的電腦裡
+  readTextFile("http://192.168.1.17:8082/img_info", function (text) {
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
     var photo = data.img_info[1].url;
-    var ll=0;
-    while (ll<data.img_info.length){
-        //test為自己設的id，照片匯入的地方
-        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-        document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-        document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
-        ll++;
+    var ll = 0;
+    while (ll < data.img_info.length) {
+      //test為自己設的id，照片匯入的地方
+      //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
+      document.getElementById("test").innerHTML += "<img id='" + ll + "' class='mySlides1'>";
+      document.getElementById(ll).src = "http://192.168.1.17:8082" + data.img_info[ll].url;
+      ll++;
     }
-});
+  });
 </script>
-	<head>
-		<title>春天模板</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../assets/css/main_spring.css" />
-	</head>
-	<body class="subpage">
-    <!--
+
+<head>
+  <title>春天模板</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/main_spring.css" />
+</head>
+
+<body class="subpage">
+  <!--
     <div id="w3slide" class="w3-content w3-display-container">
     <div id="test"></div>
     <img id="slide" class="mySlides1" src="../images/test7.jpg">
@@ -55,38 +58,61 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
     <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
     </div>
     -->
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="../index.html">春天展示區<span>&ensp;青蛙阿婆的故事</span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
-            
-        <!-- Nav -->
-            <nav id="menu">
-                <ul class="links">
-                    <li><a href="../index.html">Home&ensp;首頁</a></li>
-                    <li><a href="story.html">Stroy&ensp;青蛙阿婆的故事</a></li>
-                    <li><a href="spring.html">Spring&ensp;春天</a></li>
-                    <li><a href="summer/summer.html">Summer&ensp;夏天</a></li>
-                    <li><a href="autumn.html">Autumn&ensp;秋天</a></li>
-                    <li><a href="winter\winter.html">Winter&ensp;冬天</a></li>
-                    <li><a href="nature\frog.html">Frog&ensp;青蛙展示區</a></li>
-                    <li><a href="nature\butterfly.html">Butterfly&ensp;蝴蝶展示區</a></li>
-                    <li><a href="..\weather\index.php">Weather&ensp;未來天氣</a></li>
-                </ul>
-            </nav>
+  <!-- Header -->
+  <header id="header">
+    <div class="logo">
+      <a href="../index.html">春天展示區
+        <span>&ensp;青蛙阿婆的故事</span>
+      </a>
+    </div>
+    <a href="#menu">Menu</a>
+  </header>
 
-        <!-- One -->
-            <section id="One" class="wrapper style3">
-                <div class="inner">
-                    <header class="align-center">
-                        <p>春天 ‧ 戀愛的季節</p><p>青蛙阿婆，讓你愛上大自然</p>
-                        <h2>Spring</h2>
-                    </header>
-                </div>
-            </section>
-        <!-- Two -->
-        <!--
+  <!-- Nav -->
+  <nav id="menu">
+    <ul class="links">
+      <li>
+        <a href="../index.html">Home&ensp;首頁</a>
+      </li>
+      <li>
+        <a href="story.html">Stroy&ensp;青蛙阿婆的故事</a>
+      </li>
+      <li>
+        <a href="spring.html">Spring&ensp;春天</a>
+      </li>
+      <li>
+        <a href="summer/summer.html">Summer&ensp;夏天</a>
+      </li>
+      <li>
+        <a href="autumn.html">Autumn&ensp;秋天</a>
+      </li>
+      <li>
+        <a href="winter\winter.html">Winter&ensp;冬天</a>
+      </li>
+      <li>
+        <a href="nature\frog.html">Frog&ensp;青蛙展示區</a>
+      </li>
+      <li>
+        <a href="nature\butterfly.html">Butterfly&ensp;蝴蝶展示區</a>
+      </li>
+      <li>
+        <a href="..\weather\index.php">Weather&ensp;未來天氣</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- One -->
+  <section id="One" class="wrapper style3">
+    <div class="inner">
+      <header class="align-center">
+        <p>春天 ‧ 戀愛的季節</p>
+        <p>青蛙阿婆，讓你愛上大自然</p>
+        <h2>Spring</h2>
+      </header>
+    </div>
+  </section>
+  <!-- Two -->
+  <!--
         <div class ="grass">
         <img src="../images/spring_grass.png"/>
         </div>
@@ -97,78 +123,97 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
         <img src="../images/spring_grass.png"/>
         </div>
         -->
-        <section id="two" class="wrapper style2">
-            <div class = "spbg">
-                <p class = "sprh2">批糗底加拉</p>
-                <p class = "sprp2">你曾經作夢過自己是蝴蝶或青蛙嗎</p>
-            </div>
-            <div class="inner">
-                <div class="box">
-                    <div class="content">
-                            <div id="test"></div>
-                                <img id="slide" class="mySlides1" src="../images/test7.jpg">
-                                <img id="slide" class="mySlides1" src="../images/test8.jpg">
-                                <img id="slide" class="mySlides1" src="../images/test9.jpg">
-                                <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
-                                <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
-                                <div class="frogintro" id="frogintro">
-                                <p>
-                                俗名:</br>
-                                叫聲:</br>
-                                特徵:</br>
-                                </p>
-                                </div>
-<header class="align-center"></header>
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides1");
-        if (n > x.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = x.length
-        }
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-        }
-        //display:block 就會自動換行
-        x[slideIndex-1].style.display = "block";  
-        //指定的毫秒数后调用函数或计算表达式
-        setTimeout(showDivs, 1000);
-    } 
-</script>
-                        </div>
-                    </div>
-                </div>
-        </section>
-		<!-- Footer -->
-		<footer id="footer">
-      <div class="container">
-		    <ul class="icons">
-          <li><a href="tel:+886(0)912431655" class="icon fa-phone"><span class="label">Contact</span></a></li>
-          <li><a href="https://www.facebook.com/froggrandmashome/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="https://www.instagram.com/explore/locations/256186917/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="http://frog.18851.com.tw/index.html" class="icon fa-heart"><span class="label">Website</span></a></li>
-        </ul>
+  <section id="two" class="wrapper style2">
+    <div class="spbg">
+      <p class="sprh2">批糗底加拉</p>
+      <p class="sprp2">你曾經作夢過自己是蝴蝶或青蛙嗎</p>
+    </div>
+    <div class="inner">
+      <div class="box">
+        <div class="content">
+          <div id="test"></div>
+          <img id="slide" class="mySlides1" src="../images/test7.jpg">
+          <img id="slide" class="mySlides1" src="../images/test8.jpg">
+          <img id="slide" class="mySlides1" src="../images/test9.jpg">
+          <input type="button" id="w3button1" value="&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
+          <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
+          <div class="frogintro" id="frogintro">
+            <p>
+              俗名:</br>
+              叫聲:</br>
+              特徵:</br>
+            </p>
+          </div>
+          <header class="align-center"></header>
+          <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides1");
+              if (n > x.length) {
+                slideIndex = 1
+              }
+              if (n < 1) {
+                slideIndex = x.length
+              }
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              //display:block 就會自動換行
+              x[slideIndex - 1].style.display = "block";
+              //指定的毫秒数后调用函数或计算表达式
+              setTimeout(showDivs, 1000);
+            }
+          </script>
+        </div>
       </div>
-	    <div class="copyright">
-        &copy; 國立暨南國際大學資訊管理學系. 版權所有.
-      </div>
-		</footer>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <ul class="icons">
+        <li>
+          <a href="tel:+886(0)912431655" class="icon fa-phone">
+            <span class="label">Contact</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/froggrandmashome/" class="icon fa-facebook">
+            <span class="label">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/explore/locations/256186917/" class="icon fa-instagram">
+            <span class="label">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://frog.18851.com.tw/index.html" class="icon fa-heart">
+            <span class="label">Website</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">
+      &copy; 國立暨南國際大學資訊管理學系. 版權所有.
+    </div>
+  </footer>
 
 
-        <!-- Scripts -->
-            <script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/skel.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.scrollex.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
