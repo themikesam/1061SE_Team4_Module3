@@ -1,166 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <script>
-var images_all = new Array();
-function readTextFile(file, callback) {
+  var images_all = new Array();
+
+  function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
     rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+        callback(rawFile.responseText);
+      }
     }
     rawFile.send(null);
-}
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
+  }
+  readTextFile("http://10.105.13.1:8082/img_info", function (text) {
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
     var photo = data.img_info[1].url;
-    var ll=0;
-    while (ll<data.img_info.length){
-        //test為自己設的id，照片匯入的地方
-        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-        document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-        ll++;
+    var ll = 0;
+    while (ll < data.img_info.length) {
+      //test為自己設的id，照片匯入的地方
+      //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
+      document.getElementById("test").innerHTML += "<img id='" + ll + "' class='mySlides1'>";
+      document.getElementById(ll).src = "http://10.105.13.1:8082" + data.img_info[ll].url;
+      ll++;
     }
-});
+  });
 </script>
+
 <head>
-    <meta charset="UTF-8">
-    <title>冬天展示區 by TEMPLATED</title>
-    <link rel="stylesheet" href="rotating-slider.min.css">
-	<link rel="stylesheet" href="../../assets/css/main_winter.css" />
-    <style>
-        /* Demo Styles */
-        @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
-        body{
-            background-image:url('圖片/snow.jpg');
-			background-repeat:no-repeat;
-			background-size:cover;
-			background-position: center; 
-			height:600px;
-			weight:400px;
-            font-family: 'Roboto Slab', sans-serif;
-            font-weight: 300;
-            overflow: hidden;
-        }
-        .rotating-slider ul.slides li{
-            color: #fff
-        }
-        .rotating-slider ul.slides li:nth-of-type(1){
-            background: #3498db;
-        }
-        .rotating-slider ul.slides li:nth-of-type(2){
-            background: #f1c40f;
-        }
-        .rotating-slider ul.slides li:nth-of-type(3){
-            background: #e74c3c;
-        }
-        .rotating-slider ul.slides li:nth-of-type(4){
-           background: #3498db;
-        }
-        .rotating-slider ul.slides li:nth-of-type(5){
-            background: #f1c40f;
-        }
-        .rotating-slider ul.slides li:nth-of-type(6){
-            background: #e74c3c;
-        }
-        .rotating-slider ul.slides li .inner{
-            box-sizing: border-box;
-            padding: 2em;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>冬天展示區</title>
+  <link rel="stylesheet" href="rotating-slider.min.css">
+  <link rel="stylesheet" href="../../assets/css/main_winter.css" />
+  <style>
+    /* Demo Styles */
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
+    body {
+      background-image: url('圖片/snow.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      weight: 400px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: 300;
+      overflow: hidden;
+    }
+
+    .rotating-slider ul.slides li {
+      color: #fff
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(1) {
+      background: #3498db;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(2) {
+      background: #f1c40f;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(3) {
+      background: #e74c3c;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(4) {
+      background: #3498db;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(5) {
+      background: #f1c40f;
+    }
+
+    .rotating-slider ul.slides li:nth-of-type(6) {
+      background: #e74c3c;
+    }
+
+    .rotating-slider ul.slides li .inner {
+      box-sizing: border-box;
+      padding: 2em;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 </head>
+
 <body class="subpage">
-   <!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="../../index.html">HOME <span>by FrogMaMa</span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="../../index.html">Home</a></li>
-                    <li><a href="../story/story.html">青蛙阿婆的故事</a></li>
-                    <li><a href="../spring.html">Spring 春天</a></li>
-                    <li><a href="../summer/summer.html">Summer 夏天</a></li>
-                    <li><a href="../autumn.html">Autumn 秋天</a></li>
-                    <li><a href="winter.html">Winter 冬天</a></li>
-				</ul>
-			</nav>
-
-		<!-- One -->
-			<section id="One" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p>冬天白色宮殿</p>
-						<h2>Winter</h2>
-		    <div class="copyright">
-                &copy; Untitled. All rights reserved.
-            </div>
-			</footer>
-					</header>
-				</div>
-			</section>
-    <div class="rotating-slider">
-        <ul class="slides">
-            <li>
-                <div class="inner">
-                    <img src="圖片/win01.jpg">
-                </div>
-            </li>
-            <li>
-                <div class="inner">
-					<img src="圖片/win02.jpg">
-				</div>
-            </li>
-            <li>
-                <div class="inner">
-                    <img src="圖片/win03.jpg">
-                </div>
-            </li>
-            <li>
-                <div class="inner">
-					<img src="圖片/win04.jpg">
-                </div>
-            </li>
-            <li>
-                <div class="inner">
-                    <img src="圖片/win05.jpg">
-                </div>
-            </li>
-            <li>
-                <div class="inner">
-                    <img src="圖片/win06.jpg">
-                </div>
-            </li>
-        </ul>
+  <!-- Header -->
+  <header id="header">
+    <div class="logo">
+      <a href="../../index.html">冬天展示區
+        <span>青蛙阿婆的故事</span>
+      </a>
     </div>
+    <a href="#menu">Menu</a>
+  </header>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="jquery.rotating-slider.min.js"></script>
-    <script>
-        $(function(){ 
-            $('.rotating-slider').rotatingSlider({
-                slideHeight : Math.min(360, window.innerWidth -80),
-                slideWidth : Math.min(480, window.innerWidth - 80),
-                afterRotationStart: function(){
-                    console.log('Rotating to slide '+($('.rotating-slider .active-slide').index() + 1));
-                }
-            });
-        });
-    </script>
-	<script src="../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../../assets/js/skel.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+  <!-- Nav -->
+  <nav id="menu">
+    <ul class="links">
+      <li>
+        <a href="../../index.html">Home</a>
+      </li>
+      <li>
+        <a href="../story/story.html">青蛙阿婆的故事</a>
+      </li>
+      <li>
+        <a href="../spring.html">Spring 春天</a>
+      </li>
+      <li>
+        <a href="../summer/summer.html">Summer 夏天</a>
+      </li>
+      <li>
+        <a href="../autumn.html">Autumn 秋天</a>
+      </li>
+      <li>
+        <a href="winter.html">Winter 冬天</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- One -->
+  <section id="One" class="wrapper style3">
+    <div class="inner">
+      <header class="align-center">
+        <p>冬天白色宮殿</p>
+        <h2>Winter</h2>
+        <div class="copyright">
+          &copy; 國立暨南國際大學資訊管理學系. 版權所有.
+        </div>
+        </footer>
+      </header>
+    </div>
+  </section>
+  <div class="rotating-slider">
+    <ul class="slides">
+      <li>
+        <div class="inner">
+          <img src="圖片/win01.jpg">
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <img src="圖片/win02.jpg">
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <img src="圖片/win03.jpg">
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <img src="圖片/win04.jpg">
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <img src="圖片/win05.jpg">
+        </div>
+      </li>
+      <li>
+        <div class="inner">
+          <img src="圖片/win06.jpg">
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="jquery.rotating-slider.min.js"></script>
+  <script>
+    $(function () {
+      $('.rotating-slider').rotatingSlider({
+        slideHeight: Math.min(360, window.innerWidth - 80),
+        slideWidth: Math.min(480, window.innerWidth - 80),
+        afterRotationStart: function () {
+          console.log('Rotating to slide ' + ($('.rotating-slider .active-slide').index() + 1));
+        }
+      });
+    });
+  </script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/jquery.scrollex.min.js"></script>
+  <script src="../../assets/js/skel.min.js"></script>
+  <script src="../../assets/js/util.js"></script>
+  <script src="../../assets/js/main.js"></script>
 
 </body>
+
 </html>
