@@ -248,7 +248,24 @@ $(function() {
 		};
 	
 	})();
-
+    
+    $.ajax({
+            url: 'http://10.105.13.1:8082/img_info',
+            type: 'get',
+            dataType: 'json',
+            success: function (data) 
+            {
+                result = JSON.parse(JSON.stringify(data));
+                var n=0;               
+                while(n<result.img_info.length)
+                {
+                 $new  = $('<li><a href="#"><img src="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" data-large="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
+     Gallery.addItems( $new );
+     n++;
+                }
+                
+            }
+        });
 	Gallery.init();
 	
 	/*
