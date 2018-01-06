@@ -18,18 +18,18 @@ function readTextFile(file, callback) {
 //usage:
 readTextFile("http://10.105.13.1:8082/img_info", function(text){
     var data = JSON.parse(text);
-    var ll=0;
-    while (ll<data.img_info.length){
-        document.getElementById("testkk").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
-        if(data.img_info[ll].classification=='青蛙')
+    var n=0;
+    while (n<data.img_info.length){
+        document.getElementById("test1").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[n].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[n].title+'</h2><p class="tm-figure-description">'+data.img_info[n].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[n].url+'">View more</a></figcaption></figure></div>';
+        if(data.img_info[n].classification=='青蛙')
         {
-        	document.getElementById("testkk2").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        	document.getElementById("test2").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[n].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[n].title+'</h2><p class="tm-figure-description">'+data.img_info[n].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[n].url+'">View more</a></figcaption></figure></div>';
         }
-        if(data.img_info[ll].classification=='蝴蝶')
+        if(data.img_info[n].classification=='蝴蝶')
         {
-        	document.getElementById("testkk3").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        	document.getElementById("test3").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[n].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[n].title+'</h2><p class="tm-figure-description">'+data.img_info[n].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[n].url+'">View more</a></figcaption></figure></div>';
         }
-        ll++;
+        n++;
     }
 });
 </script>
@@ -124,7 +124,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="1" data-page-type="gallery">
                             <div class="tm-img-gallery-container">
-                                <div class="tm-img-gallery gallery-one" id="testkk"></div>
+                                <div class="tm-img-gallery gallery-one" id="test1"></div>
                             </div>
                         </div>                                                    
                     </div>                    
@@ -137,7 +137,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="2" data-page-type="gallery">
                             <div class="tm-img-gallery-container">
-                                <div class="tm-img-gallery gallery-two" id="testkk2">
+                                <div class="tm-img-gallery gallery-two" id="test2">
                                 </div>                                 
                             </div>
                         </div>                      
@@ -149,7 +149,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                     <div class="cd-full-width">
                         <div class="container-fluid js-tm-page-content" data-page-no="3" data-page-type="gallery">                        
                             <div class="tm-img-gallery-container">
-                                <div class="tm-img-gallery gallery-three" id="testkk3">
+                                <div class="tm-img-gallery gallery-three" id="test3">
                                 
                                                                                                                                    
                                 </div>                                 
