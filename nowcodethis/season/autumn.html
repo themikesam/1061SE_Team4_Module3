@@ -29,6 +29,14 @@
       document.getElementById(op2).src = "http://10.105.13.1:8082" + data.img_info[op2].url;
       op++;
       op2++;
+      document.getElementById("t").innerHTML+= data.img_info[op].title;
+      document.getElementById("s").innerHTML+= data.img_info[op].sex;
+      document.getElementById("f").innerHTML+= data.img_info[op].feature;
+      //document.getElementById("d").innerHTML+= data.img_info[op].description;
+      document.getElementById("bt").innerHTML+= data.img_info[op].title;
+      document.getElementById("bs").innerHTML+= data.img_info[op].sex;
+      document.getElementById("bf").innerHTML+= data.img_info[op].feature;
+      //document.getElementById("bd").innerHTML+= data.img_info[op2].description;
     }
     /*
     console.log(data);
@@ -130,20 +138,14 @@
       </div>
     </section>
     <div class="introduce" id="introduce">
-      <p>
-        俗名:</br>
-        性別:</br>
-        特徵:</br>
-        簡介:</br>
-      </p>
+      <p id="t" style="font-size:18px;">俗名:</p>
+      <p id="s" style="font-size:18px;">性別:</p>
+      <p id="f" style="font-size:18px;">特徵:</p>
     </div>
     <div class="introduce2" id="introduce2">
-      <p>
-        俗名:</br>
-        性別:</br>
-        特徵:</br>
-        簡介:</br>
-      </p>
+      <p id="bt" style="font-size:18px;">俗名:</p>
+      <p id="bs" style="font-size:18px;">性別:</p>
+      <p id="bf" style="font-size:18px;">特徵:</p>
     </div>
     <div class="hello" id="hello">
       <img src="images\autumnfrog2.png" style="width:200px;height:200px" />
