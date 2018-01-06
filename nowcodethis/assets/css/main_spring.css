@@ -3528,13 +3528,14 @@
 
 			#header > .logo a {
 				font-size: 1.25em;
-				color: #FFF;
+				color: #99f92f;
 				text-decoration: none;
                 font-family:Microsoft JhengHei;
 			}
 
 				#header > .logo a:hover {
-					color: rgba(255, 255, 255, 0.65);
+					color: #8cc64b;
+                    font-weight:bold;
 				}
 
 			#header > .logo span {
