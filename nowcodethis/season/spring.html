@@ -23,59 +23,60 @@ function readTextFile(file, callback) {
 
 //usage:
 //192.168.1.17會匯入照片到各位的電腦裡
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
+//var ip = 'http://192.168.1.17:8082';
+readTextFile("http://192.168.1.17:8082/img_info", function(text){
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
     var photo = data.img_info[1].url;
     var ll=0;
+    var arr = new Array();
     while (ll<data.img_info.length){
-    if (data.img_info[ll].classification =='青蛙'){
+        if (data.img_info[ll].classification =='青蛙'){
             //test為自己設的id，照片匯入的地方
             //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-            document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-            document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
+            document.getElementById("test1").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
+            document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+            //document.getElementById("introname").innerHTML += data.img_info[ll].title;
+            //document.getElementById("introfea").innerHTML += data.img_info[ll].feature;
+            //document.getElementById("word1").innerHTML += '</div>';
+            //document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+            //document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;
             ll++;
-    }
-    if (data.img_info[ll].classification =='蝴蝶'){
-        document.getElementById("test2").innerHTML += "<img id='"+tt+"' class='mySlides2'>";
-        document.getElementById(tt).src = "http://10.105.13.1:8082"+data.img_info[tt].url;
-        ll++;
-    }
+        }
+        else if (data.img_info[ll].classification =='蝴蝶'){
+            document.getElementById("test2").innerHTML += "<img id='"+ll+"' class='mySlides2'>";
+            document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+            ll++;
+        }}
 });
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
+/*
+readTextFile("http://192.168.1.17:8082/img_info", function(text){
+alert("NO~");
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
     var photo = data.img_info[1].url;
     var ll=0;
     while (ll<data.img_info.length){
-        //test為自己設的id，照片匯入的地方
-        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-        document.getElementById("word1").innerHTML += "<div class='inner'><div class='box'><a class='lightbox' href='"+"http://192.168.1.17:8082"+data.img_info[ll].url+"'><img id='"+ll+"'></a><div class='caption'><h3 id='h"+ll+"'>Thumbnail label</h3><p id='t"+ll+"'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div>";
-        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-        document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;
-        document.getElementById("f"+ll).innerHTML= data.img_info[ll].feature;
-        document.getElementById("d"+ll).innerHTML= data.img_info[ll].description;
-        ll++;
+        if (data.img_info[ll].classification =='青蛙'){/*
+            document.getElementById("word1").innerHTML += '<div class="frogintro"><p1 id=\"'+'t'+ll+'\">名字</p1></div>';
+            document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+            document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;
+            document.getElementById("f"+ll).innerHTML= data.img_info[ll].feature;
+            document.getElementById("d"+ll).innerHTML= data.img_info[ll].description;
+            ll++;
+        }
+        else if (data.img_info[ll].classification =='蝴蝶'){
+            document.getElementById("word2").innerHTML += "<div class="frogintro2"><p1 id='t"+ll+"'>名字</p1><p2 id='d"+ll+"'>特徵</p2></div>";
+            document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+            document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;
+            document.getElementById("d"+ll).innerHTML= data.img_info[ll].description;
+            ll++;
+        }
+        
     }
-});
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
-    var data = JSON.parse(text);
-    //console.log(data);
-    //第一張照片
-    var photo = data.img_info[1].url;
-    var ll=0;
-    while (ll<data.img_info.length){
-        //test為自己設的id，照片匯入的地方
-        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-        document.getElementById("word2").innerHTML += "<div  class='col-sm-6 col-md-4'><div class='thumbnail'><a class='lightbox' href='"+"http://192.168.1.17:8082"+data.img_info[ll].url+"'><img id='"+ll+"'></a><div class='caption'><h3 id='h"+ll+"'>Thumbnail label</h3><p id='t"+ll+"'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div></div>";
-        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-        document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;
-        document.getElementById("d"+ll).innerHTML= data.img_info[ll].description;
-        ll++;
-    }
-});
+});*/
 </script>
 	<head>
 		<title>春天模板</title>
@@ -96,7 +97,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
     -->
         <!-- Header -->
         <header id="header">
-            <div class="logo"><a href="../season/spring.html">春天展示區<span>&ensp;FrogMaMa</span></a></div>
+            <div class="logo"><a href="../season/spring.html">春天展示區<a href="../index.html"><span>&ensp;FrogMaMa</span></a></div>
             <a href="#menu">Menu</a>
         </header>
         <!-- Nav -->
@@ -129,13 +130,16 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                 <p class = "sprp2">你曾經作夢過自己是蝴蝶或青蛙嗎</p>
             </div>
             <!-- 蝴蝶的幻燈片 -->
+            
 <div class="butterflyy">
 <div class="butterfly">
-<div class="mySlides2 id="test2"></div><!--
+<div id="test2">
+<!--
 <img id="slide" class="mySlides2" src="../images/test7.jpg">
 <img id="slide" class="mySlides2 "src="../images/test8.jpg">
 <img id="slide" class="mySlides2" src="../images/test9.jpg">
 -->
+</div>
 <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs2(-1)">
 <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">
 </div>
@@ -143,24 +147,20 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
     <div class="inner">
         <div class="box">
             <div class="content">
-                <div id="test" ></div>
+                <div id="test1" ></div>
                     <!-- 青蛙的幻燈片 -->
                     <img id="slide" class="mySlides1">
                     <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
                     <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
                     <div class="frogintro" id="frogintro">
                         <div id="word1"></div>
-                        <p>
-                        名字:</br>
-                        聲音:</br>
-                        特徵:</br>
-                        </p>
+                        <p1>名字:</p1></br>
+                        <p2>聲音:</p2></br>
+                        <p3>特徵:</p3>
                     <div class="frogintro2" id="frogintro2">
                         <div id="word2"></div>
-                        <p>
-                        名字:</br>
-                        特徵:</br>
-                        </p>
+                        <p1 id="introname">名字:xzczxc</p1></br>
+                        <p2 id="introfea">特徵:zxczxc</p2>
                                 
 <header class="align-center"></header>
 <script>
@@ -183,8 +183,9 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
         }
         //display:block 就會自動換行
         x[slideIndex-1].style.display = "block";  
-    }    
-    
+        //document.getElementById("introname").innerHTML = data.img_info[ll].title;
+        //document.getElementById("introfea").innerHTML = data.img_info[ll].feature;
+    }
     var slideIndex2 = 1;
     showDivs2(slideIndex2);
     function plusDivs2(n) {
