@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <script>
+var ip = "http://192.168.0.106:8082";
 var images_all = new Array();
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
@@ -13,18 +14,25 @@ function readTextFile(file, callback) {
     }
     rawFile.send(null);
 }
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
+readTextFile(ip+"/img_info", function(text){
+
     var data = JSON.parse(text);
+	//alert(data.img_info.length);
     //console.log(data);
     //第一張照片
-    var photo = data.img_info[1].url;
     var ll=0;
-    while (ll<data.img_info.length){
+	var img_index=1;
+    while (ll<data.img_info.length)
+	{
         //test為自己設的id，照片匯入的地方
         //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-        document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-        ll++;
+		if(data.img_info[ll].classification=="青蛙")
+		{
+			document.getElementById("test"+img_index).innerHTML += "<img id='"+img_index+"'>";
+			document.getElementById(img_index).src = ip+data.img_info[ll].url;
+			img_index++;
+        }
+		ll++;
     }
 });
 </script>
@@ -122,6 +130,13 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
 			</section>
     <div class="rotating-slider">
         <ul class="slides">
+		<li><div id="test1" class="inner"></div></li>
+        <li><div id="test2" class="inner"></div></li>
+		<li><div id="test3" class="inner"></div></li>
+        <li><div id="test4" class="inner"></div></li>
+		<li><div id="test5" class="inner"></div></li>
+        
+		<!--
             <li>
                 <div class="inner">
                     <img src="圖片/win01.jpg">
@@ -151,7 +166,7 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                 <div class="inner">
                     <img src="圖片/win06.jpg">
                 </div>
-            </li>
+            </li>-->
         </ul>
     </div>
 
