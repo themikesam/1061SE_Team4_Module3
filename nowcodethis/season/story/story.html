@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-  //這邊直接copy
-  var images_all = new Array();
-
-  function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function () {
-      if (rawFile.readyState === 4 && rawFile.status == "200") {
-        callback(rawFile.responseText);
-      }
-    }
-    rawFile.send(null);
-  }
-</script>
     <head>
         <title>青蛙阿婆的家</title>
 		<meta charset="UTF-8" />
@@ -56,6 +40,18 @@
 			</div>
 		</script>
     </head>
+    <style type="text/css">
+    .fixedsizeimg
+    {
+        width:550px;;
+        height:400px
+    }
+    .thumbsizeimg
+    {
+        width:65px;;
+        height:40px
+    }
+    </style>
     <body class="subpage">
     
             <!-- Header -->
@@ -122,8 +118,8 @@
 							</div>
 							<div class="es-carousel">
 								<ul>
-                                <li><a href="#"><img src="images/thumbs/h1.jpg" data-large="images/h1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>'
-                                <li><a href="#"><img src="images/thumbs/h2.jpg" data-large="images/h2.jpg" alt="image02" data-description="From off a hill whose concave womb reworded" /></a></li>'
+                                <li><a href="#"><img src="images/thumbs/h1.jpg" data-large="images/h1.jpg" alt="image01" data-description="旅館正面(近)" /></a></li>'
+                                <li><a href="#"><img src="images/thumbs/h2.jpg" data-large="images/h2.jpg" alt="image02" data-description="旅館正面(遠)" /></a></li>'
                                 </ul>
 							</div>
 						</div>

@@ -216,7 +216,7 @@ $(function() {
 				
 				$('<img/>').load( function() {
 					
-					$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
+					$rgGallery.find('div.rg-image').empty().append('<img class="fixedsizeimg" src="' + largesrc + '"/>');
 					
 					if( title )
 						$rgGallery.find('div.rg-caption').show().children('p').empty().text( title );
@@ -259,9 +259,13 @@ $(function() {
                 var n=0;               
                 while(n<result.img_info.length)
                 {
-                 $new  = $('<li><a href="#"><img src="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" data-large="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
-     Gallery.addItems( $new );
-     n++;
+                    if(data.img_info[n].classification=='其他'){
+                        
+                    
+                 $new  = $('<li><a href="#"><img class="thumbsizeimg" src="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" data-large="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" alt="image01" data-description="'+result.img_info[n].description+'" /></a></li>');
+                Gallery.addItems( $new );
+                    }
+            n++;
                 }
                 
             }
