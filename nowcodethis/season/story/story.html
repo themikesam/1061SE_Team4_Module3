@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-  //這邊直接copy
-  var images_all = new Array();
-
-  function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function () {
-      if (rawFile.readyState === 4 && rawFile.status == "200") {
-        callback(rawFile.responseText);
-      }
-    }
-    rawFile.send(null);
-  }
-</script>
     <head>
         <title>青蛙阿婆的家</title>
 		<meta charset="UTF-8" />
@@ -56,6 +40,18 @@
 			</div>
 		</script>
     </head>
+    <style type="text/css">
+    .fixedsizeimg
+    {
+        width:500px;;
+        height:350px
+    }
+    .thumbsizeimg
+    {
+        width:60px;;
+        height:40px
+    }
+    </style>
     <body class="subpage">
     
             <!-- Header -->
