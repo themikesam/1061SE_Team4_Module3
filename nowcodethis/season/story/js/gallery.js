@@ -259,9 +259,13 @@ $(function() {
                 var n=0;               
                 while(n<result.img_info.length)
                 {
+                    if(data.img_info[n].classification=='其他'){
+                        
+                    
                  $new  = $('<li><a href="#"><img class="thumbsizeimg" src="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" data-large="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" alt="image01" data-description="'+result.img_info[n].description+'" /></a></li>');
-     Gallery.addItems( $new );
-     n++;
+                Gallery.addItems( $new );
+                    }
+            n++;
                 }
                 
             }
