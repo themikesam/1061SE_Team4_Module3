@@ -272,7 +272,7 @@
                 slider.flexAnimate(target, slider.vars.pauseOnAction);
               }
             }
-
+            
             // setup flags to prevent event duplication
             if (watchedEvent === "") {
               watchedEvent = event.type;
@@ -845,12 +845,51 @@
              true;
     };
     slider.getTarget = function(dir) {
-      slider.direction = dir;
-      if (dir === "next") {
-        return (slider.currentSlide === slider.last) ? 0 : slider.currentSlide + 1;
-      } else {
-        return (slider.currentSlide === 0) ? slider.last : slider.currentSlide - 1;
-      }
+        slider.direction = dir;
+        //alert();
+
+        
+      
+        if (dir === "next") {
+            if(slider.obj=='frog')
+            {
+                //alert($('#test').data('flexslider').currentSlide);
+                /*if($('#test').data('flexslider').currentSlide==0)
+                {
+                    $('#t').text('俗名:齒蛙');
+                    $('#s').text('性別:中性');
+                    $('#f').text('特徵:擁有一排潔白的牙齒');
+                }
+                else
+                {*/
+                    $('#t').text("俗名: "+image_frog[$('#test').data('flexslider').currentSlide].title);
+                    $('#s').text("性別: "+image_frog[$('#test').data('flexslider').currentSlide].sex);
+                    $('#f').text("特徵: "+image_frog[$('#test').data('flexslider').currentSlide].description);
+               // }
+            }
+            else if(slider.obj=='butterfly')
+            {
+                $('#bt').text("俗名: "+image_butterfly[$('#tes').data('flexslider').currentSlide].title);
+                $('#bs').text("性別: "+image_butterfly[$('#tes').data('flexslider').currentSlide].sex);
+                $('#bf').text("特徵: "+image_butterfly[$('#tes').data('flexslider').currentSlide].description);
+            }
+            return (slider.currentSlide === slider.last) ? 0 : slider.currentSlide + 1;
+        
+        } else if (dir === "prev"){
+                if(slider.obj=='frog')
+                {
+                    $('#t').text("俗名: "+image_frog[$('#test').data('flexslider').currentSlide-2].title);
+                    $('#s').text("性別: "+image_frog[$('#test').data('flexslider').currentSlide-2].sex);
+                    $('#f').text("特徵: "+image_frog[$('#test').data('flexslider').currentSlide-2].description);
+                }
+                else if(slider.obj=='butterfly')
+                {
+                    $('#bt').text("俗名: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].title);
+                    $('#bs').text("性別: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].sex);
+                    $('#bf').text("特徵: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].description);
+                }
+            return (slider.currentSlide === 0) ? slider.last : slider.currentSlide - 1;
+        }
     };
 
     // SLIDE:
@@ -950,6 +989,7 @@
             }
           } else {
             slider.slides.css({ "opacity": 0, "display": "block", "webkitTransition": "opacity " + slider.vars.animationSpeed / 1000 + "s ease", "zIndex": 1 }).eq(slider.currentSlide).css({ "opacity": 1, "zIndex": 2});
+            
           }
         }
         // SMOOTH HEIGHT:
@@ -1001,6 +1041,7 @@
 
     slider.update = function(pos, action) {
       slider.doMath();
+      
 
       // update currentSlide and slider.animatingTo if necessary
       if (!carousel) {
@@ -1008,6 +1049,7 @@
           slider.currentSlide += 1;
         } else if (pos <= slider.currentSlide && pos !== 0) {
           slider.currentSlide -= 1;
+          
         }
         slider.animatingTo = slider.currentSlide;
       }
@@ -1020,6 +1062,7 @@
           if (carousel && slider.currentSlide > slider.last) {
             slider.currentSlide -= 1;
             slider.animatingTo -= 1;
+            
           }
           methods.controlNav.update("remove", slider.last);
         }
@@ -1181,7 +1224,7 @@
         case "play": $slider.play(); break;
         case "pause": $slider.pause(); break;
         case "stop": $slider.stop(); break;
-        case "next": $slider.flexAnimate($slider.getTarget("next"), true); break;
+        case "next": $slider.flexAnimate($slider.getTarget("next"), true);break;
         case "prev":
         case "previous": $slider.flexAnimate($slider.getTarget("prev"), true); break;
         default: if (typeof options === "number") { $slider.flexAnimate(options, true); }
