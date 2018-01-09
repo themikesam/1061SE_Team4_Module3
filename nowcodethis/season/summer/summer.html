@@ -20,7 +20,10 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
     var data = JSON.parse(text);
     var ll=0;
     while (ll<data.img_info.length){
-        document.getElementById("testkk").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        if(data.img_info[ll].classification=='青蛙' || data.img_info[ll].classification=='蝴蝶')
+        {
+            document.getElementById("testkk").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
+        }
         if(data.img_info[ll].classification=='青蛙')
         {
             document.getElementById("testkk2").innerHTML += '<div class="grid-item"><figure class="effect-sadie"><img src="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'" alt="Image" class="img-fluid tm-img"><figcaption><h2 class="tm-figure-title">'+data.img_info[ll].title+'</h2><p class="tm-figure-description">'+data.img_info[ll].description+'</p><a href="'+'http://10.105.13.1:8082'+data.img_info[ll].url+'">View more</a></figcaption></figure></div>';
@@ -206,8 +209,8 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
                                                 <p class="tm-text"><a href="../story/story.html"> <img src = "圖庫/book.jpg"> </a></p>
                                             </div>
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
-                                                <h2 class="tm-text-title"><a href="../../weather/js/weather.php">Weather 天氣</h2>
-                                                <p class="tm-text"><a href="../../weather/js/weather.php"> <img src = "圖庫/weather.jpg"> </a></p>     
+                                                <h2 class="tm-text-title"><a href="http://10.105.13.1:8083/weather">Weather 天氣</h2>
+                                                <p class="tm-text"><a href="http://10.105.13.1:8083/weather"> <img src = "圖庫/weather.jpg"> </a></p>     
                                             </div>
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding">
                                                 <h2 class="tm-text-title"><a href="../../index.html">Home 回首頁</a></h2>
