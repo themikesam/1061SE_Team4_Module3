@@ -259,7 +259,7 @@ $(function() {
                 var n=0;               
                 while(n<result.img_info.length)
                 {
-                 $new  = $('<li><a href="#"><img class="thumbsizeimg" src="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" data-large="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
+                 $new  = $('<li><a href="#"><img class="thumbsizeimg" src="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" data-large="'+'http://10.105.13.1:8082'+result.img_info[n].url+'" alt="image01" data-description="'+result.img_info[n].description+'" /></a></li>');
      Gallery.addItems( $new );
      n++;
                 }
