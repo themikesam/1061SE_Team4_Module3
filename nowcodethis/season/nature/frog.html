@@ -31,7 +31,6 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
         document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
         document.getElementById("h"+ll).innerHTML= data.img_info[ll].title;
         document.getElementById("t"+ll).innerHTML= data.img_info[ll].description;
-
         ll++;
     }
 });

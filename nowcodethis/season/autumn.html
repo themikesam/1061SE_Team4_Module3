@@ -83,7 +83,7 @@
         animation: "fade"
       });
     $.ajax({
-            url: 'http://127.0.0.1:8082/img_info',
+            url: 'http://10.105.13.1:8082/img_info',
             type: 'get',
             dataType: 'json',
             success: function (data) 
@@ -92,7 +92,7 @@
                 result = JSON.parse(JSON.stringify(data));
                 for(var i =0;i<result.img_info.length;i++)
                 {
-                  input = "<li id='l"+i+"'><img src='"+"http://127.0.0.1:8082"+result.img_info[i].url+"'></li>";
+                  input = "<li id='l"+i+"'><img src='"+"http://10.105.13.1:8082"+result.img_info[i].url+"'></li>";
                   $('#test').data('flexslider').addSlide(input);
                   $('#l'+i).css({"display": "block"});
                 }

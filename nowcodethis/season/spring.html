@@ -24,7 +24,7 @@ function readTextFile(file, callback) {
 //usage:
 //192.168.1.17會匯入照片到各位的電腦裡
 //var ip = 'http://192.168.1.17:8082';
-readTextFile("http://192.168.1.17:8082/img_info", function(text){
+readTextFile("http://10.105.13.1:8082/img_info", function(text){
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
@@ -36,19 +36,22 @@ readTextFile("http://192.168.1.17:8082/img_info", function(text){
             //test為自己設的id，照片匯入的地方
             //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
             document.getElementById("test1").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-            document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
-            //document.getElementById("introname").innerHTML += data.img_info[ll].title;
+            document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
+            /*document.getElementById("word1").innerHTML = '<div class="frogintro"><p1 id=\"'+'t'+ll+'\">名字</p1></div>';
+            /*document.getElementById("word11").innerHTML += ''data.img_info[ll].title;
             //document.getElementById("introfea").innerHTML += data.img_info[ll].feature;
             //document.getElementById("word1").innerHTML += '</div>';
-            //document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
-            //document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;
+            document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
+            document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;*/
             ll++;
         }
         else if (data.img_info[ll].classification =='蝴蝶'){
             document.getElementById("test2").innerHTML += "<img id='"+ll+"' class='mySlides2'>";
-            document.getElementById(ll).src = "http://192.168.1.17:8082"+data.img_info[ll].url;
+            document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
             ll++;
-        }}
+        }
+    images_all.push(data.img_info[ll]);
+    }
 });
 /*
 readTextFile("http://192.168.1.17:8082/img_info", function(text){
@@ -130,15 +133,12 @@ alert("NO~");
                 <p class = "sprp2">你曾經作夢過自己是蝴蝶或青蛙嗎</p>
             </div>
             <!-- 蝴蝶的幻燈片 -->
-            
 <div class="butterflyy">
 <div class="butterfly">
-<div id="test2">
-<!--
+<div id="test2"><!--
 <img id="slide" class="mySlides2" src="../images/test7.jpg">
 <img id="slide" class="mySlides2 "src="../images/test8.jpg">
-<img id="slide" class="mySlides2" src="../images/test9.jpg">
--->
+<img id="slide" class="mySlides2" src="../images/test9.jpg">-->
 </div>
 <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs2(-1)">
 <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">
@@ -153,27 +153,26 @@ alert("NO~");
                     <input type="button" id="w3button1" value= "&#10094; prev" class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">
                     <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
                     <div class="frogintro" id="frogintro">
-                        <div id="word1"></div>
-                        <p1>名字:</p1></br>
+                        <div>名字:<p id="word11"></p></div></br>
                         <p2>聲音:</p2></br>
                         <p3>特徵:</p3>
                     <div class="frogintro2" id="frogintro2">
                         <div id="word2"></div>
                         <p1 id="introname">名字:xzczxc</p1></br>
                         <p2 id="introfea">特徵:zxczxc</p2>
-                                
 <header class="align-center"></header>
 <script>
     var slideIndex = 0;
     showDivs(slideIndex);
     function plusDivs(n) {
         showDivs(slideIndex += n);
+        document.getElementById("word11").innerHTML = images_all[slideIndex].title;
     }
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides1");
         if (n > x.length) {
-            slideIndex = 1
+            slideIndex = 1;
         }
         if (n < 1) {
             slideIndex = x.length
@@ -195,7 +194,7 @@ alert("NO~");
         var i;
         var x = document.getElementsByClassName("mySlides2");
         if (n > x.length) {
-            slideIndex2 = 1
+            slideIndex2 = 1;
         }
         if (n < 1) {
             slideIndex2 = x.length
