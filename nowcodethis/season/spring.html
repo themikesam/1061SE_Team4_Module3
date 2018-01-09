@@ -28,13 +28,20 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
-    var photo = data.img_info[1].url;
     var ll=0;
-    var arr = new Array();
+    var first_frog=false , first_butterfly=false;
     while (ll<data.img_info.length){
         if (data.img_info[ll].classification =='青蛙'){
+            if(!first_frog)
+            {
+                document.getElementById("word11").innerHTML = data.img_info[ll].title;
+                document.getElementById("word12").innerHTML = data.img_info[ll].feature;
+                document.getElementById("word13").innerHTML = data.img_info[ll].description;
+                first_frog = true;
+            }
             //test為自己設的id，照片匯入的地方
             //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
+            
             document.getElementById("test1").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
             document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
             /*document.getElementById("word1").innerHTML = '<div class="frogintro"><p1 id=\"'+'t'+ll+'\">名字</p1></div>';
@@ -43,14 +50,22 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
             //document.getElementById("word1").innerHTML += '</div>';
             document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
             document.getElementById("t"+ll).innerHTML= data.img_info[ll].title;*/
-            ll++;
+            
         }
         else if (data.img_info[ll].classification =='蝴蝶'){
+            if(!first_butterfly)
+            {
+                document.getElementById("word21").innerHTML = data.img_info[ll].title;
+                document.getElementById("word22").innerHTML = data.img_info[ll].description;
+                first_frog = true;
+            }
             document.getElementById("test2").innerHTML += "<img id='"+ll+"' class='mySlides2'>";
             document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-            ll++;
+            
         }
+        
     images_all.push(data.img_info[ll]);
+    ll++;
     }
 });
 /*
@@ -117,7 +132,6 @@ alert("NO~");
                     <li><a href="..\weather\index.php">Weather&ensp;未來天氣</a></li>
                 </ul>
             </nav>
-
         <!-- One -->
             <section id="One" class="wrapper style3">
                 <div class="inner">
@@ -154,12 +168,11 @@ alert("NO~");
                     <input type="button" id="w3button2" value="next &#10095;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">
                     <div class="frogintro" id="frogintro">
                         <div>名字:<p id="word11"></p></div></br>
-                        <p2>聲音:</p2></br>
-                        <p3>特徵:</p3>
+                        <div>聲音:<p id="word12"></p></div></br>
+                        <div>特徵:<p id="word13"></p></div>
                     <div class="frogintro2" id="frogintro2">
-                        <div id="word2"></div>
-                        <p1 id="introname">名字:xzczxc</p1></br>
-                        <p2 id="introfea">特徵:zxczxc</p2>
+                        <div>名字:<p id="word21"></p></div></br>
+                        <div>特徵:<p id="word22"></p></div>
 <header class="align-center"></header>
 <script>
     var slideIndex = 0;
@@ -167,6 +180,8 @@ alert("NO~");
     function plusDivs(n) {
         showDivs(slideIndex += n);
         document.getElementById("word11").innerHTML = images_all[slideIndex].title;
+        document.getElementById("word12").innerHTML = images_all[slideIndex].feature;
+        document.getElementById("word13").innerHTML = images_all[slideIndex].description;
     }
     function showDivs(n) {
         var i;
@@ -189,6 +204,8 @@ alert("NO~");
     showDivs2(slideIndex2);
     function plusDivs2(n) {
         showDivs2(slideIndex2 += n);
+        document.getElementById("word21").innerHTML = images_all[slideIndex].title;
+        document.getElementById("word22").innerHTML = images_all[slideIndex].description;
     }
     function showDivs2(n) {
         var i;
