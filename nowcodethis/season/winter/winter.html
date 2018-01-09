@@ -73,8 +73,25 @@ readTextFile(ip+"/img_info", function(text){
         .rotating-slider ul.slides li:nth-of-type(5){
             background: #f1c40f;
         }
-        .rotating-slider ul.slides li:nth-of-type(6){
-            background: #e74c3c;
+        .rotating-slider ul.slides li img:nth-of-type(1){
+            width:300px;
+            height:200px;
+        }
+        .rotating-slider ul.slides li img:nth-of-type(2){
+            width:300px;
+            height:200px;
+        }
+        .rotating-slider ul.slides li img:nth-of-type(3){
+            width:300px;
+            height:200px;
+        }
+        .rotating-slider ul.slides li img:nth-of-type(4){
+            width:300px;
+            height:200px;
+        }
+        .rotating-slider ul.slides li img:nth-of-type(5){
+            width:300px;
+            height:200px;
         }
         .rotating-slider ul.slides li .inner{
             box-sizing: border-box;
@@ -87,7 +104,7 @@ readTextFile(ip+"/img_info", function(text){
 <body onLoad="init()">
    <!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="../../index.html">HOME <span>by FrogMaMa</span></a></div>
+				<div class="logo"><a href="../../index.html">冬天展示區 <span>by FrogMaMa</span></a></div>
 				<a href="#menu">Menu</a>
 			</header>
 
@@ -110,7 +127,8 @@ readTextFile(ip+"/img_info", function(text){
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>冬天白色宮殿</p>
+						<p>冬天 ‧ 冰冷的世界</p>
+                        <p>因人情而溫暖</p>
 						<h2>Winter</h2>
 		    <footer id="footer">
       <div class="container">
@@ -176,7 +194,7 @@ readTextFile(ip+"/img_info", function(text){
         $(function(){ 
             $('.rotating-slider').rotatingSlider({
                 slideHeight : Math.min(360, window.innerWidth -80),
-                slideWidth : Math.min(480, window.innerWidth - 80),
+                slideWidth : Math.min(480, window.innerWidth -80),
                 afterRotationStart: function(){
                     console.log('Rotating to slide '+($('.rotating-slider .active-slide').index() + 1));
                 }
