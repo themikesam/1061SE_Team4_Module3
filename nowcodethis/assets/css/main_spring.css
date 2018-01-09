@@ -4227,7 +4227,7 @@ p.sprp2{
   margin-top:5px;
   margin-left:700px;
   width:450px;
-  height:300px;
+  height:450px;
   background:rgba(255,255,255,0.3);
   border: 30px solid black;
   border-image-source: url(../../images/introframe.png);
@@ -4247,10 +4247,10 @@ p.sprp2{
   font-family: Microsoft JhengHei;
   font-weight: bold;
   font-size:20px;
-  margin-top:-950px;
+  margin-top:-1000px;
   margin-left:-60px;
   width:450px;
-  height:300px;
+  height:450px;
   background:rgba(255,255,255,0.3);
   border: 30px solid #ff0000;
   border-image-source: url(../../images/introframe2.png);
