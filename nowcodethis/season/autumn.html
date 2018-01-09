@@ -1,76 +1,5 @@
 <!doctype html>
 <html>
-<script>
-  //這邊直接copy
-  var images_all = new Array();
-
-  function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function () {
-      if (rawFile.readyState === 4 && rawFile.status == "200") {
-        callback(rawFile.responseText);
-      }
-    }
-    rawFile.send(null);
-  }
-
-  //usage:
-  //192.168.1.17會匯入照片到各位的電腦裡
-  readTextFile("http://10.105.13.1:8082/img_info", function (text) {
-    var data = JSON.parse(text);
-    var op=0;
-    var op2=0;
-    /*
-    while (op < data.img_info.length&&op2 < data.img_info.length) {
-      document.getElementById("frog").innerHTML += "<li><img id='"+op+"' /></li>";
-      document.getElementById("butterfly").innerHTML += "<li><img id='"+op2+"'/></li>";
-      document.getElementById(op).src = "http://10.105.13.1:8082" + data.img_info[op].url;
-      document.getElementById(op2).src = "http://10.105.13.1:8082" + data.img_info[op2].url;
-      
-      document.getElementById("t").innerHTML+= data.img_info[op].title;
-      document.getElementById("s").innerHTML+= data.img_info[op].sex;
-      document.getElementById("f").innerHTML+= data.img_info[op].feature;
-      //document.getElementById("d").innerHTML+= data.img_info[op].description;
-      document.getElementById("bt").innerHTML+= data.img_info[op2].title;
-      document.getElementById("bs").innerHTML+= data.img_info[op2].sex;
-      document.getElementById("bf").innerHTML+= data.img_info[op2].feature;
-      //document.getElementById("bd").innerHTML+= data.img_info[op2].description;
-      
-      op++;
-      op2++;
-    }
-    */
-    
-    for(op=0;op<data.img_info.length;op++)
-    {
-        document.getElementById("frog").innerHTML += "<li><img id='"+op+"' /></li>";
-        document.getElementById(op).src = "http://10.105.13.1:8082" + data.img_info[op].url;
-    }
-    
-    for(op2=0;op2<data.img_info.length;op2++)
-    {
-        document.getElementById("butterfly").innerHTML += "<li><img id='"+op2+"' /></li>";
-        document.getElementById(op2).src = "http://10.105.13.1:8082" + data.img_info[op2].url;
-    }
-    
-    /*
-    console.log(data);
-    var photo = data.img_info[1].url;
-    var ll=0;
-    while (ll<data.img_info.length){
-        //test為自己設的id，照片匯入的地方
-        //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
-        document.getElementById("test").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-        document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-        ll++;
-    }
-    */
-
-  });
-</script>
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>秋天展示</title>
@@ -81,9 +10,15 @@
     $(window).load(function () {
     $('#test').flexslider({
         animation: "fade"
-      });
+      }
+     );
+     $('#tes').flexslider({
+        animation: "fade"
+      }
+     );
+     //alert($('#tes').data('flexslider').currentSlide);
     $.ajax({
-            url: 'http://127.0.0.1:8082/img_info',
+            url: 'http://10.105.13.1:8082/img_info',
             type: 'get',
             dataType: 'json',
             success: function (data) 
@@ -92,9 +27,18 @@
                 result = JSON.parse(JSON.stringify(data));
                 for(var i =0;i<result.img_info.length;i++)
                 {
-                  input = "<li id='l"+i+"'><img src='"+"http://127.0.0.1:8082"+result.img_info[i].url+"'></li>";
-                  $('#test').data('flexslider').addSlide(input);
-                  $('#l'+i).css({"display": "block"});
+                  if(result.img_info[i].classification=="青蛙")
+                  {
+                    input = "<li id='f"+i+"'><img src='"+"http://10.105.13.1:8082"+result.img_info[i].url+"'></li>";
+                    $('#test').data('flexslider').addSlide(input);
+                    $('#f'+i).css({"display": "block"});
+                  }
+                  else if(result.img_info[i].classification=="蝴蝶")
+                  {
+                    input = "<li id='b"+i+"'><img src='"+"http://10.105.13.1:8082"+result.img_info[i].url+"'></li>";
+                    $('#tes').data('flexslider').addSlide(input);
+                    $('#b'+i).css({"display": "block"});
+                  }
                 }
             },
         });
@@ -186,14 +130,9 @@
     <div class="hello2" id="hello2">
       <img src="images\aubutter.png" style="width:200px;height:200px" />
     </div>
-    <!--<div class="flexslider" id="flexslider">
-      <ul id="frog" class="slides">
-        <li><img src="images/Frog.png" /></li>
-      </ul>
-    </div>-->
     <div id="test" class="flexslider" >
       <ul id="frog" class="slides">
-        <li></li>
+          <li><img src="images/test7.jpg"/></li>
       </ul>
     </div>
     <!--Butter-->
@@ -214,9 +153,9 @@
       <i></i>
       <i></i>
     </div>
-    <div class="flexslider" id="flexslider" style="margin-left:650px">
+    <div id="tes" class="flexslider" style="margin-left:650px">
       <ul id="butterfly" class="slides">
-        
+        <li><img src="images/test6.jpg"/></li>
       </ul>
     </div>
     <!-- Footer -->
