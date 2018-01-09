@@ -847,11 +847,9 @@
     slider.getTarget = function(dir) {
       slider.direction = dir;
       if (dir === "next") {
-        //78828248284284
         return (slider.currentSlide === slider.last) ? 0 : slider.currentSlide + 1;
       } else {
         return (slider.currentSlide === 0) ? slider.last : slider.currentSlide - 1;
-        //78828248284284
       }
     };
 
@@ -952,7 +950,6 @@
             }
           } else {
             slider.slides.css({ "opacity": 0, "display": "block", "webkitTransition": "opacity " + slider.vars.animationSpeed / 1000 + "s ease", "zIndex": 1 }).eq(slider.currentSlide).css({ "opacity": 1, "zIndex": 2});
-            
           }
         }
         // SMOOTH HEIGHT:
@@ -1004,7 +1001,6 @@
 
     slider.update = function(pos, action) {
       slider.doMath();
-      
 
       // update currentSlide and slider.animatingTo if necessary
       if (!carousel) {
@@ -1012,7 +1008,6 @@
           slider.currentSlide += 1;
         } else if (pos <= slider.currentSlide && pos !== 0) {
           slider.currentSlide -= 1;
-          
         }
         slider.animatingTo = slider.currentSlide;
       }
@@ -1025,7 +1020,6 @@
           if (carousel && slider.currentSlide > slider.last) {
             slider.currentSlide -= 1;
             slider.animatingTo -= 1;
-            
           }
           methods.controlNav.update("remove", slider.last);
         }
@@ -1187,7 +1181,7 @@
         case "play": $slider.play(); break;
         case "pause": $slider.pause(); break;
         case "stop": $slider.stop(); break;
-        case "next": $slider.flexAnimate($slider.getTarget("next"), true);break;
+        case "next": $slider.flexAnimate($slider.getTarget("next"), true); break;
         case "prev":
         case "previous": $slider.flexAnimate($slider.getTarget("prev"), true); break;
         default: if (typeof options === "number") { $slider.flexAnimate(options, true); }
