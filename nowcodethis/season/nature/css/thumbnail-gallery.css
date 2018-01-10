@@ -47,6 +47,8 @@ body {
 .tz-gallery .caption{
     padding: 26px 30px;
     text-align: center;
+    width: 325px;
+    height: 190px;
 }
 
 .tz-gallery .caption h3 {
