@@ -8,7 +8,8 @@
 <html>
 <script>
 //這邊直接copy
-var images_all = new Array();
+var images_frog = new Array();
+var images_butterfly = new Array();
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -24,7 +25,7 @@ function readTextFile(file, callback) {
 //usage:
 //192.168.1.17會匯入照片到各位的電腦裡
 //var ip = 'http://192.168.1.17:8082';
-readTextFile("http://10.105.13.1:8082/img_info", function(text){
+readTextFile("http://127.0.0.1:8082/img_info", function(text){
     var data = JSON.parse(text);
     //console.log(data);
     //第一張照片
@@ -43,7 +44,8 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
             //myslides1是每張照片的class，也是自己設，要對應到你們的幻燈片
             
             document.getElementById("test1").innerHTML += "<img id='"+ll+"' class='mySlides1'>";
-            document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
+            document.getElementById(ll).src = "http://127.0.0.1:8082"+data.img_info[ll].url;
+            images_frog.push(data.img_info[ll]);
             /*document.getElementById("word1").innerHTML = '<div class="frogintro"><p1 id=\"'+'t'+ll+'\">名字</p1></div>';
             /*document.getElementById("word11").innerHTML += ''data.img_info[ll].title;
             //document.getElementById("introfea").innerHTML += data.img_info[ll].feature;
@@ -57,15 +59,14 @@ readTextFile("http://10.105.13.1:8082/img_info", function(text){
             {
                 document.getElementById("word21").innerHTML = data.img_info[ll].title;
                 document.getElementById("word22").innerHTML = data.img_info[ll].description;
-                first_frog = true;
+                first_butterfly = true;
             }
             document.getElementById("test2").innerHTML += "<img id='"+ll+"' class='mySlides2'>";
-            document.getElementById(ll).src = "http://10.105.13.1:8082"+data.img_info[ll].url;
-            
+            document.getElementById(ll).src = "http://127.0.0.1:8082"+data.img_info[ll].url;
+            images_butterfly.push(data.img_info[ll]);
         }
         
-    images_all.push(data.img_info[ll]);
-    ll++;
+        ll++;
     }
 });
 /*
@@ -122,7 +123,7 @@ alert("NO~");
             <nav id="menu">
                 <ul class="links">
                     <li><a href="../index.html">Home&ensp;首頁</a></li>
-                    <li><a href="story/story.html">Story&ensp;青蛙丫婆的故事</a></li>
+                    <li><a href="story/story.html">Stroy&ensp;青蛙阿婆的故事</a></li>
                     <li><a href="spring.html">Spring&ensp;春天</a></li>
                     <li><a href="summer/summer.html">Summer&ensp;夏天</a></li>
                     <li><a href="autumn.html">Autumn&ensp;秋天</a></li>
@@ -170,18 +171,20 @@ alert("NO~");
                         <div>名字:<p id="word11"></p></div></br>
                         <div>聲音:<p id="word12"></p></div></br>
                         <div>特徵:<p id="word13"></p></div>
+
                     <div class="frogintro2" id="frogintro2">
                         <div>名字:<p id="word21"></p></div></br>
                         <div>特徵:<p id="word22"></p></div>
+                    </div>
 <header class="align-center"></header>
 <script>
     var slideIndex = 0;
     showDivs(slideIndex);
     function plusDivs(n) {
         showDivs(slideIndex += n);
-        document.getElementById("word11").innerHTML = images_all[slideIndex].title;
-        document.getElementById("word12").innerHTML = images_all[slideIndex].feature;
-        document.getElementById("word13").innerHTML = images_all[slideIndex].description;
+        document.getElementById("word11").innerHTML = images_frog[slideIndex-1].title;
+        document.getElementById("word12").innerHTML = images_frog[slideIndex-1].feature;
+        document.getElementById("word13").innerHTML = images_frog[slideIndex-1].description;
     }
     function showDivs(n) {
         var i;
@@ -204,8 +207,8 @@ alert("NO~");
     showDivs2(slideIndex2);
     function plusDivs2(n) {
         showDivs2(slideIndex2 += n);
-        document.getElementById("word21").innerHTML = images_all[slideIndex].title;
-        document.getElementById("word22").innerHTML = images_all[slideIndex].description;
+        document.getElementById("word21").innerHTML = images_butterfly[slideIndex2-1].title;
+        document.getElementById("word22").innerHTML = images_butterfly[slideIndex2-1].description;
     }
     function showDivs2(n) {
         var i;
