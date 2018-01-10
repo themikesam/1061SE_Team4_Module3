@@ -23,7 +23,7 @@
      //alert($('#tes').data('flexslider').currentSlide+1);
      
     $.ajax({
-            url: 'http://192.168.43.17:8082/img_info',
+            url: 'http://10.105.13.1:8082/img_info',
             type: 'get',
             dataType: 'json',
             success: function (data) 
@@ -34,14 +34,14 @@
                 {
                   if(result.img_info[i].classification=="青蛙")
                   {
-                    input = "<li id='f"+i+"'><img src='"+"http://192.168.43.17:8082"+result.img_info[i].url+"'></li>";
+                    input = "<li id='f"+i+"'><img src='"+"http://10.105.13.1:8082"+result.img_info[i].url+"'></li>";
                     $('#test').data('flexslider').addSlide(input);
                     $('#f'+i).css({"display": "block"});
                     image_frog.push(result.img_info[i]);
                   }
                   else if(result.img_info[i].classification=="蝴蝶")
                   {
-                    input = "<li id='b"+i+"'><img src='"+"http://192.168.43.17:8082"+result.img_info[i].url+"'></li>";
+                    input = "<li id='b"+i+"'><img src='"+"http://10.105.13.1:8082"+result.img_info[i].url+"'></li>";
                     $('#tes').data('flexslider').addSlide(input);
                     $('#b'+i).css({"display": "block"});
                     image_butterfly.push(result.img_info[i]);

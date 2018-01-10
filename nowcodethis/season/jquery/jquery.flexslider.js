@@ -847,9 +847,6 @@
     slider.getTarget = function(dir) {
         slider.direction = dir;
         //alert();
-
-        
-      
         if (dir === "next") {
             if(slider.obj=='frog')
             {
@@ -863,15 +860,15 @@
                 else
                 {*/
                     $('#t').text("俗名: "+image_frog[$('#test').data('flexslider').currentSlide].title);
-                    $('#s').text("性別: "+image_frog[$('#test').data('flexslider').currentSlide].sex);
-                    $('#f').text("特徵: "+image_frog[$('#test').data('flexslider').currentSlide].description);
+                    $('#s').text("特徵: "+image_frog[$('#test').data('flexslider').currentSlide].feature);
+                    $('#f').text("簡介: "+image_frog[$('#test').data('flexslider').currentSlide].description);
                // }
             }
             else if(slider.obj=='butterfly')
             {
                 $('#bt').text("俗名: "+image_butterfly[$('#tes').data('flexslider').currentSlide].title);
-                $('#bs').text("性別: "+image_butterfly[$('#tes').data('flexslider').currentSlide].sex);
-                $('#bf').text("特徵: "+image_butterfly[$('#tes').data('flexslider').currentSlide].description);
+                $('#bs').text("特徵: "+image_butterfly[$('#tes').data('flexslider').currentSlide].feature);
+                $('#bf').text("簡介: "+image_butterfly[$('#tes').data('flexslider').currentSlide].description);
             }
             return (slider.currentSlide === slider.last) ? 0 : slider.currentSlide + 1;
         
@@ -879,14 +876,14 @@
                 if(slider.obj=='frog')
                 {
                     $('#t').text("俗名: "+image_frog[$('#test').data('flexslider').currentSlide-2].title);
-                    $('#s').text("性別: "+image_frog[$('#test').data('flexslider').currentSlide-2].sex);
-                    $('#f').text("特徵: "+image_frog[$('#test').data('flexslider').currentSlide-2].description);
+                    $('#s').text("特徵: "+image_frog[$('#test').data('flexslider').currentSlide-2].feature);
+                    $('#f').text("簡介: "+image_frog[$('#test').data('flexslider').currentSlide-2].description);
                 }
                 else if(slider.obj=='butterfly')
                 {
                     $('#bt').text("俗名: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].title);
-                    $('#bs').text("性別: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].sex);
-                    $('#bf').text("特徵: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].description);
+                    $('#bs').text("特徵: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].feature);
+                    $('#bf').text("簡介: "+image_butterfly[$('#tes').data('flexslider').currentSlide-2].description);
                 }
             return (slider.currentSlide === 0) ? slider.last : slider.currentSlide - 1;
         }
